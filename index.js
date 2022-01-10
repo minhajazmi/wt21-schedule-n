@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 app.post("/cats", (req, res) => {
   console.log("Testing the response", req.body);
-  res.send("Your form has been sucessfully submited");
+  res.send("Your form has been sucessfully submited.");
 });
 
 app.listen(5000, () => {
