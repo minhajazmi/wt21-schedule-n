@@ -1,0 +1,39 @@
+[
+ {
+   "Timestamp": "2021/12/13 5:38:47 PM GMT+1",
+   "I enjoy working on more than one project a time.": 2,
+   "I work better when I work alone.": 4,
+   "I prefer exciting tasks over boring ones.": 2,
+   "I can be easily distracted during work or study.": 3,
+   "I have high standard for my work or study.": 3,
+   "I like to switch between tasks.": 2,
+   "I focus a lot on details.": 4,
+   "I usually dive straight into it when I get a new task.": 4,
+   "I like to have my work approved by others.": 3,
+   "I have a daily or weekly plan for my work or study.": 1,
+   "I enjoy having big ideas.": 1,
+   "I lose track of time when I am absorbed in my task.": 3,
+   "I procrastinate a lot.": 3,
+   "I find it hard to switch between tasks.": 2,
+   "I like spontaneous activities or tasks.": 1,
+   "I spend a lot of time on finishing touches of my work.": 4,
+   "I can focus for long period.": 3,
+   "I always know how to prioritise my tasks.": 3,
+   "I like instant reward.": 2,
+   "I prefer to finish one task before moving on to another.": 4,
+   "I am usually the one who arrive late or miss the appointment.": 1,
+   "I am more productive when I have more tasks.": 3,
+   "I tend to make decision at the last minute.": 2,
+   "I focus on big picture more than details of a project.": 1,
+   "I work better when I can decide the deadline myself.": 4,
+   "What do you think": {
+      "hope time management can help you to do?": "Do my task in regular and in order. maintain it."
+   },
+   "Please tell us (as many as possible) the advices": {
+      "methods": {
+         "tools you find useful to you in your time management?": "1. Think about duration of that task(how much it takes). 2.think about what it needs to be done for that task. 3. think about how much time I have. 3. make a section from that task. 4. put section in my daily plan. 5. define the start point and finish point for that. 5. write it down on paper. 6.track it.",
+         "tools you find useless to you in your time management?": "use google app to remind me my tasks. use reminder of mac to define tasks and other stuff. "
+      }
+   }
+}
+]
