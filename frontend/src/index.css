@@ -1,8 +1,55 @@
 body {
   margin: 0;
-  font-family: "Josefin Sans";
+  font-family: "Josefin Sans", sans-serif;
   background-color: #ffffff;
 }
 
-code {
+.primaryButton {
+  background-color: #4c57a9;
+  border: 2px solid #4c57a9;
+  border-radius: 24px;
+  color: #ffffff;
+  font-family: "Josefin Sans";
+  font-size: 1.4rem;
+  padding: 9px 55px;
+}
+.primaryButton:hover {
+  background-color: #9aa5fd;
+  border: 2px solid #9aa5fd;
+}
+.primaryButton:active {
+  background-color: #000965;
+  border: 2px solid #000965;
+}
+
+.primaryButton:disabled {
+  color: #929094;
+  background-color: #e4e1e6;
+  border: 2px solid #e4e1e6;
+}
+
+.secondaryButton {
+  background-color: #ffffff;
+  border: 2px solid #4c57a9;
+  border-radius: 24px;
+  color: #4c57a9;
+  font-family: "Josefin Sans";
+  font-size: 1.4rem;
+  padding: 9px 55px;
+}
+.secondaryButton:hover {
+  color: #9aa5fd;
+  background-color: #efefff;
+  border: 2px solid #9aa5fd;
+}
+.secondaryButton:active {
+  color: #000965;
+  background-color: #efefff;
+  border: 2px solid #000965;
+}
+
+.secondaryButton:disabled {
+  color: #929094;
+  background-color: #ffffff;
+  border: 2px solid #929094;
 }
