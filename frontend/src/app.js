@@ -1,8 +1,29 @@
 import React from 'react';
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
+import Quiz from './Quiz';
+import Result from './Result';
+import Advice from './Advice';
+import Header from './Header';
 import clock from './images/clock2x.svg';
 
 function App() {
     return (
+      <div>
+        <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/result" element={<Result />} />
+        <Route path="/advice" element={<Advice />} />
+      </Routes>
+</div>
+);
+}
+
+
+function Home() {
+  const navigate = useNavigate();
+return (
 <div className="mainContainer">
   <div className="textContainer">
     <div>
@@ -10,7 +31,7 @@ function App() {
       <h2>Take a quiz and personalize your time management</h2>
     </div>
     <div>
-      <button className="primaryButton" onClick={() => console.log('Click')}>
+      <button className="primaryButton" onClick={() => navigate("/quiz")}>
             Take a Quiz
       </button>
       <p>Learn about your type</p>
@@ -20,6 +41,5 @@ function App() {
 </div>
     );
 }
-
 
 export default App;

@@ -3,9 +3,17 @@ body {
   background-color: #ffffff;
 }
 
+h1 {
+  font-size: 32;
+}
+
+h2 {
+  font-size: 28;
+}
+
 .mainContainer {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }

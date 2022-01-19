@@ -1,0 +1,17 @@
+.header h1 {
+  color: #929094;
+  font-size: 24px;
+}
+
+.header {
+  display: flex;
+  flex-wrap: row wrap;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.headerItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
