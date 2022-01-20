@@ -10,12 +10,13 @@ const navigate = useNavigate();
             <div>
                 <img src={logo} alt="Logo" />
             </div> 
-            <div  className="headerItem">
-                <div><h1>How we help you?</h1></div>
-                 <div><h1>Main features</h1></div>
-            </div>
-            <div className="headerItem">
-                <div>log in</div>
+            <div className="headerItem1">
+                <h1>How we help you?</h1></div>
+            <div className="headerItem1">
+                <h1>Main features</h1></div>
+            <div className="headerItem2">
+                log in</div>
+            <div className="headerItem2">
                 <button className="primaryButton" onClick={() => navigate("/")}>Sign up for free</button>
             </div>
         </div>

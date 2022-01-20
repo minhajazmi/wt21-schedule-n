@@ -3,6 +3,37 @@ body {
   background-color: #ffffff;
 }
 
+.radioForm {
+  background-color: #EFEFFF;
+  diplay: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 1500px;
+  width:1200;
+}
+
+.radioContainer {
+ background-color: #FFFFFF ; 
+ align-items: center;
+ height: 30px;
+}
+
+input[type="radio" ] {
+  border: 2px solid white;
+  box-shadow: 0 0 0 1px #929094;
+  appearance: none;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  transition: all ease-in 0.2s;
+}
+
+input:checked {
+  background-color: #1b2678;
+  box-shadow: 0 0 0 1px #1b2678;
+}
+
 h1 {
   font-size: 32;
 }
