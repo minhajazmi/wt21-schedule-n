@@ -7,7 +7,6 @@ function Quiz() {
   //const onSubmit = data => console.log(data);
   const onSubmit = data => alert(JSON.stringify(data));
   console.log(errors);
-
   return (
     <div>
     <form onSubmit={handleSubmit(onSubmit)} className="radioForm">
@@ -180,7 +179,7 @@ function Quiz() {
     <input {...register("deadline", { required: true })} type="radio" value="I-agree" />
     <input {...register("deadline", { required: true })} type="radio" value="completely-agree" />
     </div>
-    
+
   <div>
     <input type="submit" disabled={(!isValid)} className="primaryButton"/>
     </div>
