@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import './Header.css';
 import logo from './images/Logo.svg';
 
@@ -17,8 +17,11 @@ const navigate = useNavigate();
             <div className="headerItem2">
                 log in</div>
             <div className="headerItem2">
-                <button className="primaryButton" onClick={() => navigate("/")}>Sign up for free</button>
+                <button className="primaryButton" onClick={() => navigate("/result")}>Sign up for free</button>
             </div>
+
+
+            
         </div>
     
     
