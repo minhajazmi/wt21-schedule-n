@@ -5,17 +5,44 @@ body {
 
 .radioForm {
   background-color: #EFEFFF;
-  diplay: flex;
-  flex-direction: column;
-  align-content: center;
-  height: 1500px;
-  width:1200;
+  display: flex;
+  flex-flow: column-wrap;
+  justify-content: center;
+  align-items: center;
+  height: 2500px;
 }
 
 .radioContainer {
- background-color: #FFFFFF ; 
+ display: flex;
+ flex-direction: row;
+ /* justify-content: space-between; */
  align-items: center;
- height: 30px;
+ background-color: #FFFFFF ; 
+ padding: 32px;
+ border-radius: 16px;
+ /*border: 1px solid#1b2678;*/
+ /*height: 125px;*/
+ width: 744px;
+}
+
+input[type="submit"] {
+    background-color: #4c57a9;
+    border: 2px solid #4c57a9;
+    border-radius: 24px;
+    color: #ffffff;
+    font-family: "Josefin Sans";
+    font-size: 1.4rem;
+    padding: 9px 55px;
+}
+
+input:hover {
+  background-color: #9aa5fd;
+  border: 2px solid #9aa5fd;
+}
+
+input:active {
+  background-color: #000965;
+  border: 2px solid #000965;
 }
 
 input[type="radio" ] {
@@ -47,6 +74,7 @@ h2 {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  height: 713px;
 }
 
 .textContainer {
@@ -62,10 +90,12 @@ h2 {
   font-size: 1.4rem;
   padding: 9px 55px;
 }
+
 .primaryButton:hover {
   background-color: #9aa5fd;
   border: 2px solid #9aa5fd;
 }
+
 .primaryButton:active {
   background-color: #000965;
   border: 2px solid #000965;

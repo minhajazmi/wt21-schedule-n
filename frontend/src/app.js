@@ -4,6 +4,7 @@ import Quiz from './Quiz';
 import Result from './Result';
 import Advice from './Advice';
 import Header from './Header';
+import Footer from './Footer';
 import clock from './images/clock2x.svg';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/result" element={<Result />} />
         <Route path="/advice" element={<Advice />} />
       </Routes>
+      <Footer />
 </div>
 );
 }
