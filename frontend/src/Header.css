@@ -1,9 +1,41 @@
-@media (min-width: 768px) {
   .header h1 {
     color: #929094;
     font-size: 24px;
   }
 
+  .header h2 {
+    font-weight: 500;
+    font-size: 40px;
+  }
+
+  .popUp {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 196px;
+    background-color: #EFEFFE;
+    width: 845px;
+    height: 530px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #47464A;
+    font-size: 30px;
+    padding: 20px;
+   }
+
+   .popUpContainer {
+     align-self: flex-end;
+   }
+
+   .popUp button {
+    border-radius: 20px;
+    background-color: #47464A;
+    border: solid #47464A;
+    color: #FFFFFF;
+   }
+
+@media (min-width: 768px) {
+  
   .header {
     display: flex;
     flex-wrap: row wrap;
@@ -17,5 +49,5 @@
 
   .headerItem2 {
     align-self: center;
-  }
+  } 
 }
