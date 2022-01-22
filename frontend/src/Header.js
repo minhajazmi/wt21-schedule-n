@@ -17,7 +17,7 @@ const navigate = useNavigate();
             <div className="headerItem2">
                 log in</div>
             <div className="headerItem2">
-                <button className="primaryButton" onClick={() => navigate("/result")}>Sign up for free</button>
+                <button className="primaryButton" onClick={() => navigate("")}>Sign up for free</button>
             </div>
 
 

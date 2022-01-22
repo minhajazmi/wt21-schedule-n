@@ -32,14 +32,16 @@ return (
       <h1>manage your time based on your personality and your preferences</h1>
       <h2>Take a quiz and personalize your time management</h2>
     </div>
-    <div>
+    <div className="buttonContainer">
       <button className="primaryButton" onClick={() => navigate("/quiz")}>
             Take a Quiz
       </button>
       <p>Learn about your type</p>
     </div>
   </div>
+  <div className="imageContainer">
     <img src={clock} alt="Clock between day and night}" />
+    </div>
 </div>
     );
 }

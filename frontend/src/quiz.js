@@ -179,7 +179,18 @@ function Quiz() {
     <input {...register("deadline", { required: true })} type="radio" value="I-agree" />
     <input {...register("deadline", { required: true })} type="radio" value="completely-agree" />
     </div>
-
+    <div className="openQContainer">
+       <label>What do you think/hope time management can help you to do?</label>
+        <div><input type="text" placeholder="Your answer" size="62" {...register("openQuestion1", {required: true, min: 2})} /></div>
+      </div>
+      <div className="openQContainer"> 
+      <label>Please tell us (as many as possible) the advices/methods/tools you find useful to you in your time management?</label>
+        <div><input type="text" placeholder="Your answer" size="62" {...register("openQuestion2", {required: true, min: 2})} /></div>
+      </div>  
+      <div className="openQContainer"> 
+      <label>Please tell us (as many as possible) the advices/methods/tools you find useless to you in your time management?</label>
+      <div><input type="text" placeholder="Your answer" size="62" {...register("openQuestion3", {required: true, min: 2})} /></div>
+      </div>
   <div>
     <input type="submit" disabled={(!isValid)} className="primaryButton"/>
     </div>
@@ -188,6 +199,4 @@ function Quiz() {
   );
   }
   
-
-
 export default Quiz;
