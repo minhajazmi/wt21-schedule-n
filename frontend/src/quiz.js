@@ -1,13 +1,23 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-
+import axios from 'axios';
 
 function Quiz() {
   const { register, handleSubmit, formState: { errors, isValid } } = useForm({mode: "onChange"});
-  //const onSubmit = data => console.log(data);
-  const onSubmit = data => console.log(JSON.stringify(data));
-  console.log(errors);
+  const onSubmit = data => {
+  //console.log(JSON.stringify(data));
+  //console.log(errors);
+  axios.post('http://localhost:5000/question', (JSON.stringify(data))) 
+       .then(response => {
+        console.log(response);
+      })
+      .catch(error => {
+          console.log(error);
+      });
+    };
+
   return (
+    <>
     <div className="quizContainer">
     <div className="quizOptions">
        <p>1: completely not agree 4: completely agree</p>
@@ -199,7 +209,7 @@ function Quiz() {
     </div>
       </form>
       </div>
-
+      </>
   );
   }
 
