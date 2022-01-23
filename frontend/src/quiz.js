@@ -9,10 +9,8 @@ function Quiz() {
   console.log(errors);
   return (
     <div className="quizContainer">
-    <div>
-      
-
-      
+    <div className="quizOptions">
+       <p>1: completely not agree 4: completely agree</p>
       </div> 
     <form onSubmit={handleSubmit(onSubmit)} className="quizForm">
     <div className="radioContainer"> 
@@ -186,15 +184,15 @@ function Quiz() {
     </div>
     <div className="openQContainer">
        <label>What do you think/hope time management can help you to do?</label>
-        <div><input type="text" placeholder="Your answer" size="62" {...register("openQuestion1", {required: true, min: 2})} /></div>
+        <div><input type="text" placeholder="Your answer" size="94" {...register("openQuestion1", {required: false, min: 2})} /></div>
       </div>
       <div className="openQContainer"> 
       <label>Please tell us (as many as possible) the advices/methods/tools you find useful to you in your time management?</label>
-        <div><input type="text" placeholder="Your answer" size="62" {...register("openQuestion2", {required: true, min: 2})} /></div>
+        <div><input type="text" placeholder="Your answer" size="94" {...register("openQuestion2", {required: false, min: 2})} /></div>
       </div>  
       <div className="openQContainer"> 
       <label>Please tell us (as many as possible) the advices/methods/tools you find useless to you in your time management?</label>
-      <div><input type="text" placeholder="Your answer" size="62" {...register("openQuestion3", {required: true, min: 2})} /></div>
+      <div><input type="text" placeholder="Your answer" size="94" {...register("openQuestion3", {required: false, min: 2})} /></div>
       </div>
   <div className='quizFooter'>
     <input type="submit" disabled={(!isValid)} className="primaryButton"/>
