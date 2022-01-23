@@ -47,9 +47,6 @@ def get_TM_type(user_answers):
              return 1
          elif a == "I-disagree":
              return 2
-         # This is a typo, remove after change
-         elif a == "I-disagre":
-             return 2
          elif a == "I-agree":
              return 3
          elif a == "completely-agree":
