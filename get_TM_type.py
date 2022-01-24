@@ -14,13 +14,15 @@ Output: - a string of the name of the TM type ('Hooper'/'Perfectionist'/'Implusi
 
 # get TM_type.py
 
-def get_TM_type(user_answers):
+def get_TM_type():
     
     #%% import libraries
     # This is the convention used to import Pandas.
     import pandas as pd
     import numpy as np
     import json
+    import sys # help to read users answers by the backend,please dont delete.
+    user_answers = sys.argv[1]# helps to read the data node is sending to this python script
 
     #%% load data
     # These commands load the survey data 
