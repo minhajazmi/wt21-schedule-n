@@ -7,7 +7,14 @@ function Quiz() {
   const onSubmit = data => {
   //console.log(JSON.stringify(data));
   //console.log(errors);
-  axios.post('http://localhost:5000/question', (JSON.stringify(data))) 
+  /*let axiosConfig = {
+    headers: {
+        'Content-Type': 'application/json;charset=UTF-8',
+        "Access-Control-Allow-Origin": "*",
+    }
+  };*/
+
+  axios.post('http://localhost:5000/question', (JSON.stringify(data)))
        .then(response => {
         console.log(response);
       })
@@ -37,9 +44,8 @@ function Quiz() {
       <input {...register("choice", { required: true })} type="radio" value="I-agree" />
       <input {...register("choice", { required: true })} type="radio" value="completely-agree" />
       </div>
-  
   <div className="radioContainer">
-  <label>I like to see thrill?</label>
+  <label>I like to seek thrill?</label>
     <input {...register("thrilled", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("thrilled", { required: true })} type="radio" value="I-disgree" />
     <input {...register("thrilled", { required: true })} type="radio" value="I-agree" />

@@ -1,3 +1,4 @@
+
 const express = require("express");
 const bodyParser = require("body-parser");
 
@@ -10,7 +11,7 @@ app.use(bodyParser.json());
 
 //console.dir(app);
 
-app.post("/cats", (req, res) => {
+app.post("/question", (req, res) => {
   console.log("Testing the response", req.body);
   res.send("Your form has been sucessfully submited..");
 });

@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Result = () => {
-
+function Result() {
+//let response = 
     return (
         <div className="resultContainer">
     <div className="resultHead"><h3>My Quiz Result:</h3></div>
