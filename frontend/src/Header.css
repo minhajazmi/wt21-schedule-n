@@ -21,6 +21,7 @@
     color: #47464A;
     font-size: 30px;
     padding: 20px;
+    z-index: 10; 
    }
 
    .popUpContainer {
@@ -33,6 +34,18 @@
     border: solid #47464A;
     color: #FFFFFF;
    }
+
+   .overlay {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9;
+}
 
 @media (min-width: 768px) {
   

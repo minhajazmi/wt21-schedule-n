@@ -36,10 +36,31 @@ Start your journey by taking our quiz!
             <p>The process is simple! Take our quiz to find out what your time management style is and get tailored advice of how to maximise your productivity that will suit your personality.</p><p>We’ve gathered advice from people just like you, so that you can spend more time being produtcive</p></div>
             </Popup>
             
-        </div>
-    
-    
+        </div>    
     )
 };
 
-export default Header;
+
+
+
+function Header2() {
+    const navigate = useNavigate();
+        return (
+            <div className="header">
+                <div className="headerItem1">
+                    <img src={logo} alt="Logo" />
+                </div> 
+                <div className="headerItem1">
+                </div>
+                <div className="headerItem1">
+                </div>
+                <div className="headerItem2">
+                </div>
+                <div className="headerItem2">
+                    <button className="" onClick={() => navigate("")}>home</button>
+                </div>
+            </div>
+        )
+    };
+
+ export default Header;
