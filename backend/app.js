@@ -20,7 +20,7 @@ app.listen(5000, () => {
   console.log("Application start on port 5000");
 });
 
-mongoose
+ mongoose
   .connect("mongodb://127.0.0.1/scheduleNApp", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -33,3 +33,12 @@ mongoose
     console.log("oh no,error!");
     console.log(err);
   });
+
+  app.post("/questions", (req, res) => {
+    console.log("Testing the response", req.body);
+    res.send("Hopper");
+  });
+
+
+
+  

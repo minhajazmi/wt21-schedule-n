@@ -1,28 +1,26 @@
-import React from 'react';
+import {React, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import Result from './Result';
 
 function Quiz() {
   const { register, handleSubmit, formState: { errors, isValid } } = useForm({mode: "onChange"});
   const onSubmit = data => {
-  //console.log(JSON.stringify(data));
-  //console.log(errors);
-  /*let axiosConfig = {
-    headers: {
-        'Content-Type': 'application/json;charset=UTF-8',
-        "Access-Control-Allow-Origin": "*",
-    }
-  };*/
+  console.log(errors);
 
-  axios.post('http://localhost:5000/question', (JSON.stringify(data)))
-       .then(response => {
-        console.log(response);
+  axios.post('http://localhost:5000/questions', (JSON.stringify(data)))
+       .then(res => {
+          console.log(res);
       })
       .catch(error => {
           console.log(error);
       });
     };
 
+  /*  if (res) {
+      return <div>Type: {res}</div>;
+  } else {*/
+    
   return (
     <>
     <div className="quizContainer">
@@ -217,6 +215,7 @@ function Quiz() {
       </div>
       </>
   );
+  
   }
 
 export default Quiz;
