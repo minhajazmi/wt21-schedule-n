@@ -1,13 +1,14 @@
-import React from "react";
-import { Routes, Route, Link, useNavigate } from "react-router-dom";
+import { React, useState } from "react";
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Quiz from "./Quiz";
 import Result from "./Result";
 import Advice from "./Advice";
 import Header from "./Header";
 import Footer from "./Footer";
-import clock from "./images/clock2x.svg";
+import clock from "./images/clock.svg";
 
 function App() {
+  const location = useLocation();
   return (
     <div>
       <Header />
@@ -17,7 +18,7 @@ function App() {
         <Route path="/result" element={<Result />} />
         <Route path="/advice" element={<Advice />} />
       </Routes>
-      <Footer />
+      {location.pathname === "/" && <Footer />}
     </div>
   );
 }

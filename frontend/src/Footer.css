@@ -1,5 +1,9 @@
 @media (min-width: 768px) {
 
+/*.footer {
+    position: fixed;
+}*/
+
   ol {    
     color: #929094;
     font-size: 14px;

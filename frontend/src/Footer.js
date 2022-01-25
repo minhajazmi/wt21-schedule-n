@@ -3,8 +3,8 @@ import './Footer.css';
 
 function Footer() {
     return (
-        <div>
-            <ol className="footer">
+        <div className="footer">
+            <ol >
                 <li>Take a quiz and get advice</li>
                 <li>Hear useful advice from people like you</li>
                 <li>Get update with best solutions and advice</li>
