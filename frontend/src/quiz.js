@@ -1,4 +1,4 @@
-import {React, useState } from 'react';
+import {React, useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
@@ -6,7 +6,7 @@ import Result from './Result';
 
 function Quiz() {
   const { register, handleSubmit, formState: { errors, isValid } } = useForm({mode: "onChange"});
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState(undefined);
   //let navigate = useNavigate();
   const onSubmit = data => {
   console.log(errors);
@@ -21,6 +21,10 @@ function Quiz() {
 //navigate(./advice);
     };
 
+ useEffect(() => {
+  console.log('Change!')
+  return 
+}, [result]); 
   /*  if (res) {
       return <div>Type: {res}</div>;
   } else {*/
