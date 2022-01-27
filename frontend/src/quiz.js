@@ -1,20 +1,24 @@
 import {React, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import Result from './Result';
 
 function Quiz() {
   const { register, handleSubmit, formState: { errors, isValid } } = useForm({mode: "onChange"});
+  const [result, setResult] = useState(null);
+  //let navigate = useNavigate();
   const onSubmit = data => {
   console.log(errors);
 
-  axios.post('http://localhost:5000/questions', (JSON.stringify(data)))
-       .then(res => {
-          console.log(res);
+  axios.post('http://localhost:5000/questions', JSON.stringify(data))
+       .then(response => {
+      setResult(response.data);
       })
       .catch(error => {
-          console.log(error);
+          console.log(error)
       });
+//navigate(./advice);
     };
 
   /*  if (res) {
@@ -56,7 +60,7 @@ function Quiz() {
     <input {...register("distraction", { required: true })} type="radio" value="I-agree" />
     <input {...register("distraction", { required: true })} type="radio" value="completely-agree" />
     </div>
-  <div className="radioContainer">
+   <div className="radioContainer">
   <label>I have high standard for my work or study</label>
     <input {...register("high-standard", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("high-standard", { required: true })} type="radio" value="I-disgree" />
@@ -207,11 +211,12 @@ function Quiz() {
       <div className="openQContainer"> 
       <label>Please tell us (as many as possible) the advices/methods/tools you find useless to you in your time management?</label>
       <div><input type="text" placeholder="Your answer" size="94" {...register("openQuestion3", {required: false, min: 2})} /></div>
-      </div>
+  </div> <div>{result === null ? 'loading' : result}</div> {/*Testing response and use it as state*/}
   <div className='quizFooter'>
-    <input type="submit" disabled={(!isValid)} className="primaryButton"/>
+    <input type="submit" disabled={(!isValid)} className="primaryButton"/> 
     </div>
       </form>
+      
       </div>
       </>
   );
