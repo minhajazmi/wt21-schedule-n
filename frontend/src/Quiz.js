@@ -1,6 +1,7 @@
 import {React, useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import { PieChart } from 'react-minimal-pie-chart';
 
 function Quiz() {
 
@@ -8,12 +9,12 @@ function Quiz() {
     {
       res: 'hopper',
       name: 'Hopper',
-       content: 'Hoppers enjoy variety and the spontaneity of switching tasks frequently, but may have trouble completing all the open items on their task list. Hoppers enjoy change of pace, and the freedom to switch from one activity to another. They may often be easily distracted, however, and thereby run the risk of going off-track and not finishing what they start. Having too many open items simultaneously can ultimately cause them to be unproductive.',
+      content: 'Hoppers enjoy variety and the spontaneity of switching tasks frequently, but may have trouble completing all the open items on their task list. Hoppers enjoy change of pace, and the freedom to switch from one activity to another. They may often be easily distracted, however, and thereby run the risk of going off-track and not finishing what they start. Having too many open items simultaneously can ultimately cause them to be unproductive.',
     },
     {
-       res: 'hyperfocus',
-       name: 'Hyper-Focus',
-       content:'The Hyper Focus style is absorbed by detail but may have trouble stopping one activity to transition to something new. This style preference gets so involved in what they are doing that they may ignore reminders and cues to move on to the next priority. When Hyper Focus people are deeply involved in the task at hand, they can become so absorbed in the details, that they can lose track of time.',
+      res: 'hyperfocus',
+      name: 'Hyper-Focus',
+      content:'The Hyper Focus style is absorbed by detail but may have trouble stopping one activity to transition to something new. This style preference gets so involved in what they are doing that they may ignore reminders and cues to move on to the next priority. When Hyper Focus people are deeply involved in the task at hand, they can become so absorbed in the details, that they can lose track of time.',
     },
     {
     res: 'big_idea',
@@ -21,7 +22,7 @@ function Quiz() {
     content: 'Big Picture individuals are big thinkers but often leave the details out of their plans. They find details less attractive than global strategies and tasks that call for spontaneity. Their lofty vision and high speed of action can cause them to overlook or ignore the essential small pieces necessary for success.',
     },
     {
-   res: 'perfectionist',   
+    res: 'perfectionist',   
     name: 'Perfectionist Plus',
     content:'Perfectionist Plus types thrive on details and an endless pursuit to "get things right". Because of their very high personal standards, they believe that they should be able to do nearly everything themselves and do it all well. They may be overly concerned about others approval and often have difficulty saying "No" to the requests of others for their time.',
     },
@@ -282,6 +283,20 @@ return (<div>
         <div className="resultContainer">
     <div className="resultHead"><h3>My Quiz Result: {result.name}</h3></div>
     <div className="resultBody"><p>{result.content}</p></div>
+    <div><PieChart
+  data={[
+    { title: 'hyperfocus', value: 20, color: '#9AA5FD' },
+    { title: 'impulsive', value: 20, color: '#4C57A9' },
+    { title: 'big_idea', value: 20, color: '#E07A5F' },
+    { title: 'cliff_hanger', value: 20, color: '#F0BEB0' },
+    { title: 'hopper', value: 20, color: '#F9E3DD' },
+    { title: 'perfectionist', value: 20, color: '#EFEFFF' },
+  ]}
+  radius={40}
+  paddingAngle={1}
+  startAngle={215}
+  lineWidth={50}
+/></div>
         </div>
         </div>
   )
