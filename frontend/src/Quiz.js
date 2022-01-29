@@ -62,7 +62,7 @@ function Quiz() {
   };
 
 
-  if (result == undefined) {
+  if (result === undefined) {
     
   return (
     <>
@@ -286,11 +286,7 @@ function Quiz() {
   }
 
 else {
-  const defaultLabelStyle = {
-    fontSize: '5px',
-    fontFamily: 'sans-serif',
-    fontWeight: 500,
-  };
+  
 return (<div>
         <div className="resultHead"><h2>Quiz Results</h2></div>
         <div className="resultContainer">
@@ -302,7 +298,7 @@ return (<div>
     <h1>Time management advice for:</h1>
     <h2>{result.name}</h2>
     <p>{result.advice}</p>
-    <div><button className="primaryButton" onClick={() => navigate("/")}>Sign up to save your result</button></div>
+    <div><button className="primaryButton" onClick={() => navigate("/signup")}>Sign up to save your result</button></div>
     </div>
     <div>
     <div>time management type average between people</div>
@@ -329,13 +325,14 @@ return (<div>
       text-anchor="middle"
       style={{
         fontSize: '4px',
+        fontWeight: '700',
       }}
     >
       {dataEntry.title} {Math.round(dataEntry.percentage) + '%'}
     </text>
   )}
-  labelStyle={defaultLabelStyle}
   labelPosition={70}
+    /*fill: 'white'*/
 /></div></div>
         </div>
         </div>
