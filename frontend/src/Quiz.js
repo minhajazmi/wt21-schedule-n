@@ -46,7 +46,7 @@ function Quiz() {
 
   axios.post('http://localhost:5000/questions', JSON.stringify(data))
        .then(response => {
-      setResult(types.find(type => type.name === response.data));
+      setResult(types.find(type => type.res === response.data));
       })
       .catch(error => {
           console.log(error)

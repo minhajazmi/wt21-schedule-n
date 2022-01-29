@@ -36,7 +36,7 @@ app.listen(5000, () => {
 
   app.post("/questions", (req, res) => {
     console.log("Testing the response", req.body);
-    res.send("Hopper");
+    res.send("hopper");
   });
 
 
