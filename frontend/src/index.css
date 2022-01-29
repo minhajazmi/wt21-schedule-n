@@ -121,9 +121,7 @@ margin: 0px 150px 0 15px;
 }
 
 .resultHead {
-  background-color: #efefff;
   padding: 0 24px;
-  border-radius: 10px;
   width: 648px;
 }
 
@@ -132,6 +130,12 @@ margin: 0px 150px 0 15px;
   padding: 24px 24px;
   border-radius: 10px;
   width: 648px;
+}
+
+.pieChart {
+  width: 364px;
+  height: 364px;
+  white-space: pre-wrap;
 }
 
 label {

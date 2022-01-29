@@ -1,7 +1,6 @@
 import {React, useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { PieChart } from 'react-minimal-pie-chart';
 
 function Quiz() {
 
@@ -9,12 +8,12 @@ function Quiz() {
     {
       res: 'hopper',
       name: 'Hopper',
-      content: 'Hoppers enjoy variety and the spontaneity of switching tasks frequently, but may have trouble completing all the open items on their task list. Hoppers enjoy change of pace, and the freedom to switch from one activity to another. They may often be easily distracted, however, and thereby run the risk of going off-track and not finishing what they start. Having too many open items simultaneously can ultimately cause them to be unproductive.',
+       content: 'Hoppers enjoy variety and the spontaneity of switching tasks frequently, but may have trouble completing all the open items on their task list. Hoppers enjoy change of pace, and the freedom to switch from one activity to another. They may often be easily distracted, however, and thereby run the risk of going off-track and not finishing what they start. Having too many open items simultaneously can ultimately cause them to be unproductive.',
     },
     {
-      res: 'hyperfocus',
-      name: 'Hyper-Focus',
-      content:'The Hyper Focus style is absorbed by detail but may have trouble stopping one activity to transition to something new. This style preference gets so involved in what they are doing that they may ignore reminders and cues to move on to the next priority. When Hyper Focus people are deeply involved in the task at hand, they can become so absorbed in the details, that they can lose track of time.',
+       res: 'hyperfocus',
+       name: 'Hyper-Focus',
+       content:'The Hyper Focus style is absorbed by detail but may have trouble stopping one activity to transition to something new. This style preference gets so involved in what they are doing that they may ignore reminders and cues to move on to the next priority. When Hyper Focus people are deeply involved in the task at hand, they can become so absorbed in the details, that they can lose track of time.',
     },
     {
     res: 'big_idea',
@@ -22,7 +21,7 @@ function Quiz() {
     content: 'Big Picture individuals are big thinkers but often leave the details out of their plans. They find details less attractive than global strategies and tasks that call for spontaneity. Their lofty vision and high speed of action can cause them to overlook or ignore the essential small pieces necessary for success.',
     },
     {
-    res: 'perfectionist',   
+   res: 'perfectionist',   
     name: 'Perfectionist Plus',
     content:'Perfectionist Plus types thrive on details and an endless pursuit to "get things right". Because of their very high personal standards, they believe that they should be able to do nearly everything themselves and do it all well. They may be overly concerned about others approval and often have difficulty saying "No" to the requests of others for their time.',
     },
@@ -68,7 +67,6 @@ function Quiz() {
     <label>I enjoy working on more than one project at a time.</label>
       <input {...register("enjoy", { required: true })} type="radio" value="completely-disagree" />
       <input {...register("enjoy", { required: true })} type="radio" value="I-disgree" />
-      <input {...register("enjoy", { required: true })} type="radio" value="neutral" />
       <input {...register("enjoy", { required: true })} type="radio" value="I-agree" />
       <input {...register("enjoy", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -76,7 +74,6 @@ function Quiz() {
     <label>If I have choice, I prefer to work alone rather than group work.</label>
       <input {...register("choice", { required: true })} type="radio" value="completely-disagree" />
       <input {...register("choice", { required: true })} type="radio" value="I-disgree" />
-      <input {...register("choice", { required: true })} type="radio" value="neutral" />
       <input {...register("choice", { required: true })} type="radio" value="I-agree" />
       <input {...register("choice", { required: true })} type="radio" value="completely-agree" />
       </div>
@@ -84,7 +81,6 @@ function Quiz() {
   <label>I like to seek thrill?</label>
     <input {...register("thrilled", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("thrilled", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("thrilled", { required: true })} type="radio" value="neutral" />
     <input {...register("thrilled", { required: true })} type="radio" value="I-agree" />
     <input {...register("thrilled", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -92,7 +88,6 @@ function Quiz() {
   <label>I can be easily distracted during work or Study?</label>
     <input {...register("distraction", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("distraction", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("distraction", { required: true })} type="radio" value="neutral" />
     <input {...register("distraction", { required: true })} type="radio" value="I-agree" />
     <input {...register("distraction", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -100,7 +95,6 @@ function Quiz() {
   <label>I have high standard for my work or study</label>
     <input {...register("high-standard", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("high-standard", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("high-standard", { required: true })} type="radio" value="neutral" />
     <input {...register("high-standard", { required: true })} type="radio" value="I-agree" />
     <input {...register("high-standard", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -108,7 +102,6 @@ function Quiz() {
   <label>I like to switch between tasks.</label>
     <input {...register("switch-task", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("switch-task", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("switch-task", { required: true })} type="radio" value="neutral" />
     <input {...register("switch-task", { required: true })} type="radio" value="I-agree" />
     <input {...register("switch-task", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -116,7 +109,6 @@ function Quiz() {
   <label>I focus a lot on details.</label>
     <input {...register("focus", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("focus", { required: true })} type="radio" value="completely-agree" />
-    <input {...register("focus", { required: true })} type="radio" value="neutral" />
     <input {...register("focus", { required: true })} type="radio" value="I-disgree" />
     <input {...register("focus", { required: true })} type="radio" value="I-agree" />
     </div>
@@ -124,7 +116,6 @@ function Quiz() {
   <label>I usually dive into it when I get a new task.</label>
     <input {...register("concentrate", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("concentrate", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("concentrate", { required: true })} type="radio" value="neutral" />
     <input {...register("concentrate", { required: true })} type="radio" value="I-agree" />
     <input {...register("concentrate", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -132,7 +123,6 @@ function Quiz() {
   <label>I seek others approval.</label>
     <input {...register("approval", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("approval", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("approval", { required: true })} type="radio" value="neutral" />
     <input {...register("approval", { required: true })} type="radio" value="I-agree" />
     <input {...register("approval", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -140,7 +130,6 @@ function Quiz() {
   <label>I have a daily or weekly plan for my work or study.</label>
     <input {...register("plan", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("plan", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("plan", { required: true })} type="radio" value="neutral" />
     <input {...register("plan", { required: true })} type="radio" value="I-agree" />
     <input {...register("plan", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -148,7 +137,6 @@ function Quiz() {
   <label>I enjoy having big ideas.</label>
     <input {...register("ideas", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("ideas", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("ideas", { required: true })} type="radio" value="neutral" />
     <input {...register("ideas", { required: true })} type="radio" value="I-agree" />
     <input {...register("ideas", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -156,7 +144,6 @@ function Quiz() {
   <label>I procrastinate often.</label>
     <input {...register("procrastinate", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("procrastinate", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("procrastinate", { required: true })} type="radio" value="neutral" />
     <input {...register("procrastinate", { required: true })} type="radio" value="I-agree" />
     <input {...register("procrastinate", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -164,7 +151,6 @@ function Quiz() {
   <label>I find it hard to switch between tasks.</label>
     <input {...register("hard", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("hard", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("hard", { required: true })} type="radio" value="neutral" />
     <input {...register("hard", { required: true })} type="radio" value="I-agree" />
     <input {...register("hard", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -172,7 +158,6 @@ function Quiz() {
   <label>I like spontaneous activities or I like to solve spontaneous tasks.</label>
     <input {...register("spontaneous", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("spontaneous", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("spontaneous", { required: true })} type="radio" value="neutral" />
     <input {...register("spontaneous", { required: true })} type="radio" value="I-agree" />
     <input {...register("spontaneous", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -180,7 +165,6 @@ function Quiz() {
   <label>I spend a lot of time on finishing touches of my work.</label>
     <input {...register("finishing", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("finishing", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("finishing", { required: true })} type="radio" value="neutral" />
     <input {...register("finishing", { required: true })} type="radio" value="I-agree" />
     <input {...register("finishing", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -188,7 +172,6 @@ function Quiz() {
   <label>I find it hard to focus for a long period.</label>
     <input {...register("period", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("period", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("period", { required: true })} type="radio" value="neutral" />
     <input {...register("period", { required: true })} type="radio" value="I-agree" />
     <input {...register("period", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -196,7 +179,6 @@ function Quiz() {
   <label> I always know how to priortise my tasks.</label>
     <input {...register("priority", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("priority", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("priority", { required: true })} type="radio" value="neutral" />
     <input {...register("priority", { required: true })} type="radio" value="I-agree" />
     <input {...register("priority", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -204,7 +186,6 @@ function Quiz() {
   <label>I like instant gratificaton and find it hard to wait.</label>
     <input {...register("gratification", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("gratification", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("gratification", { required: true })} type="radio" value="neutral" />
     <input {...register("gratification", { required: true })} type="radio" value="I-agree" />
     <input {...register("gratification", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -212,7 +193,6 @@ function Quiz() {
   <label>I prefer to finish one task before moving on to another.</label>
     <input {...register("settled", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("settled", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("settled", { required: true })} type="radio" value="neutral" />
     <input {...register("settled", { required: true })} type="radio" value="I-agree" />
     <input {...register("settled", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -220,7 +200,6 @@ function Quiz() {
   <label>I am usually the one who arrives late or miss an appointment.</label>
     <input {...register("appointment", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("appointment", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("appointment", { required: true })} type="radio" value="neutral" />
     <input {...register("appointment", { required: true })} type="radio" value="I-agree" />
     <input {...register("appointment", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -228,7 +207,6 @@ function Quiz() {
   <label>I am more productive when I am busier.</label>
     <input {...register("productive", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("productive", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("productive", { required: true })} type="radio" value="neutral" />
     <input {...register("productive", { required: true })} type="radio" value="I-agree" />
     <input {...register("productive", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -236,7 +214,6 @@ function Quiz() {
   <label>I tend to make decision at the last minute.</label>
     <input {...register("decision", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("decision", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("decision", { required: true })} type="radio" value="neutral" />
     <input {...register("decision", { required: true })} type="radio" value="I-agree" />
     <input {...register("decision", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -244,7 +221,6 @@ function Quiz() {
   <label>I focus on big picture more than details of the project.</label>
     <input {...register("bigger-picture", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("bigger-picture", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("bigger-picture", { required: true })} type="radio" value="neutral" />
     <input {...register("bigger-picture", { required: true })} type="radio" value="I-agree" />
     <input {...register("bigger-picture", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -252,7 +228,6 @@ function Quiz() {
   <label>I work better when I can decide the deadline myself.</label>
     <input {...register("deadline", { required: true })} type="radio" value="completely-disagree" />
     <input {...register("deadline", { required: true })} type="radio" value="I-disgree" />
-    <input {...register("deadline", { required: true })} type="radio" value="neutral" />
     <input {...register("deadline", { required: true })} type="radio" value="I-agree" />
     <input {...register("deadline", { required: true })} type="radio" value="completely-agree" />
     </div>
@@ -279,45 +254,10 @@ function Quiz() {
   }
 
 else {
-  const defaultLabelStyle = {
-    fontSize: '5px',
-    fontFamily: 'sans-serif',
-  };
 return (<div>
         <div className="resultContainer">
-    <div className="resultHead"><h3>Quiz Results</h3></div>
-    <div className="resultBody"><p>{result.content} {result.name}</p></div>
-    <div className="pieChart"><PieChart
-  data={[
-    { title: 'Hyperfocus', value: 17, color: '#9AA5FD' },
-    { title: 'Impulsive', value: 17, color: '#4C57A9' },
-    { title: 'Big Idea', value: 17, color: '#E07A5F' },
-    { title: 'Cliffhanger', value: 17, color: '#F0BEB0' },
-    { title: 'Hopper', value: 17, color: '#F9E3DD' },
-    { title: 'Perfectionist', value: 15, color: '#EFEFFF' },
-  ]}
-  radius={50}
-  paddingAngle={1}
-  startAngle={215}
-  lineWidth={55}
-  label={({ x, y, dx, dy, dataEntry }) => (
-    <text
-      x={x}
-      y={y}
-      dx={dx}
-      dy={dy}
-      dominant-baseline="central"
-      text-anchor="middle"
-      style={{
-        fontSize: '4px',
-      }}
-    >
-      {dataEntry.title}{Math.round(dataEntry.percentage) + '%'}
-    </text>
-  )}
-  labelStyle={defaultLabelStyle}
-  labelPosition={70}
-/></div>
+    <div className="resultHead"><h3>My Quiz Result: {result.name}</h3></div>
+    <div className="resultBody"><p>{result.content}</p></div>
         </div>
         </div>
   )
