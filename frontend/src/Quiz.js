@@ -1,4 +1,5 @@
 import {React, useState } from 'react';
+import { useNavigate } from  'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { PieChart } from 'react-minimal-pie-chart';
 import axios from 'axios';
@@ -43,7 +44,7 @@ function Quiz() {
     advice: 'Cliff Hangers need to monitor their time to better estimate how long things really take to complete. They will benefit by identifying their highest priorities and scheduling earlier start dates for those tasks. If they still choose to procrastinate, it should be on the less significant priorities.',
   }
    ]
-
+  const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors, isValid } } = useForm({mode: "onChange"});
   const [result, setResult] = useState(undefined);
 
@@ -288,18 +289,23 @@ else {
   const defaultLabelStyle = {
     fontSize: '5px',
     fontFamily: 'sans-serif',
+    fontWeight: 500,
   };
 return (<div>
-        <div className="resultHead"><h3>Quiz Results</h3></div>
+        <div className="resultHead"><h2>Quiz Results</h2></div>
         <div className="resultContainer">
-    <div className="resultBody"><p>Your time management type:</p>
-    <p>{result.name}</p>
-    <p>What is like to be a {result.name}?</p>
+    <div className="resultBody"><h1>Your time management type:</h1>
+    <h2>{result.name}</h2>
+    <h3>What is like to be a {result.name}?</h3>
     <p>{result.content}</p>
-    <p>Time management advice for:</p>
-    <p>{result.name}</p>
+    <hr></hr>
+    <h1>Time management advice for:</h1>
+    <h2>{result.name}</h2>
     <p>{result.advice}</p>
+    <div><button className="primaryButton" onClick={() => navigate("/")}>Sign up to save your result</button></div>
     </div>
+    <div>
+    <div>time management type average between people</div>
     <div className="pieChart"><PieChart
   data={[
     { title: 'Hyperfocus', value: 17, color: '#9AA5FD' },
@@ -325,12 +331,12 @@ return (<div>
         fontSize: '4px',
       }}
     >
-      {dataEntry.title}{Math.round(dataEntry.percentage) + '%'}
+      {dataEntry.title} {Math.round(dataEntry.percentage) + '%'}
     </text>
   )}
   labelStyle={defaultLabelStyle}
   labelPosition={70}
-/></div>
+/></div></div>
         </div>
         </div>
   )
