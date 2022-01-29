@@ -3,7 +3,7 @@ import Result from './Result';
 
 const types = [
     {
-      res: 'hopper_score' 
+      res: 'hopper_score',
       name: 'Hopper',
        content: 'Hoppers enjoy variety and the spontaneity of switching tasks frequently, but may have trouble completing all the open items on their task list. Hoppers enjoy change of pace, and the freedom to switch from one activity to another. They may often be easily distracted, however, and thereby run the risk of going off-track and not finishing what they start. Having too many open items simultaneously can ultimately cause them to be unproductive.',
     },
