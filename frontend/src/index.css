@@ -114,7 +114,7 @@ margin: 0px 150px 0 15px;
 
 .resultContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   height: 500px;

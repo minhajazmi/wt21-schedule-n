@@ -1,7 +1,7 @@
-import {React, useState, useEffect } from 'react';
+import {React, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import axios from 'axios';
 import { PieChart } from 'react-minimal-pie-chart';
+import axios from 'axios';
 
 function Quiz() {
 
@@ -10,32 +10,38 @@ function Quiz() {
       res: 'hopper',
       name: 'Hopper',
       content: 'Hoppers enjoy variety and the spontaneity of switching tasks frequently, but may have trouble completing all the open items on their task list. Hoppers enjoy change of pace, and the freedom to switch from one activity to another. They may often be easily distracted, however, and thereby run the risk of going off-track and not finishing what they start. Having too many open items simultaneously can ultimately cause them to be unproductive.',
+      advice: 'When possible, Hoppers should eliminate distractions to offer themselves more uninterrupted chunks of time in which to finish tasks. Timers may help them stay on track. They will also find it helpful to be aware of shifts in their energy levels to recognize when they need to take a break and thereby reduce the odds of being distracted.',
     },
     {
       res: 'hyperfocus',
       name: 'Hyper-Focus',
       content:'The Hyper Focus style is absorbed by detail but may have trouble stopping one activity to transition to something new. This style preference gets so involved in what they are doing that they may ignore reminders and cues to move on to the next priority. When Hyper Focus people are deeply involved in the task at hand, they can become so absorbed in the details, that they can lose track of time.',
+      advice: 'It\'s important for Hyper Focus people to work from a prescribed plan and create natural bridges with strategies for moving from task to task. They can benefit from using backwards planning and scheduling to determine necessary project phases and start/finish dates, as well as chunking time into 20 minute segments.',
     },
     {
-    res: 'big_idea',
-    name: 'Bigger Picture',
+    res: 'big idea',
+    name: 'Big Picture',
     content: 'Big Picture individuals are big thinkers but often leave the details out of their plans. They find details less attractive than global strategies and tasks that call for spontaneity. Their lofty vision and high speed of action can cause them to overlook or ignore the essential small pieces necessary for success.',
-    },
+    advice: 'Big Picture types are much more effective when partnered with people who will handle the details and follow-through on tasks. On their own, they need to create simple, basic routines to follow, write things down, and make sure that their communications are clear and precise.',
+  },
     {
     res: 'perfectionist',   
     name: 'Perfectionist Plus',
-    content:'Perfectionist Plus types thrive on details and an endless pursuit to "get things right". Because of their very high personal standards, they believe that they should be able to do nearly everything themselves and do it all well. They may be overly concerned about others approval and often have difficulty saying "No" to the requests of others for their time.',
-    },
+    content:'Perfectionist Plus types thrive on details and an endless pursuit to \'get things right\'. Because of their very high personal standards, they believe that they should be able to do nearly everything themselves and do it all well. They may be overly concerned about others\' approval and often have difficulty saying \'No\' to the requests of others for their time.',
+    advice: 'Perfectionist Plus types must distinguish between high and low priority activities so that they can spend their time on those with the highest payoff. It\'s important for them to learn how to say no and to delegate tasks where possible so that they have room on their plate for the things they most enjoy.',
+  },
     {
     res: 'impulsive',
     name: 'Impulsive',
     content: 'Impulsive types love to leap but may forget to look first. Enjoying the rush of adrenaline, they would rather act spontaneously than follow a preset plan. However, lack of planning, or diminishing its importance, can result in missed deadlines and letting others down. Impulsives tend to get bored easily andcan find routine and maintenance tasks distasteful.',
-    },
+    advice: 'It\'s helpful for Impulsive\'s to gain perspective by looking at the bigger picture in order to make better decisions. They will benefit from longer-term planning, routine reviews, and daily targets that allow time for spontaneity. Posting mantras, intentions and reminders of their overall goals will often help remind them to stay focused on their highest priorities.',
+  },
     {
-    res: 'cliff_hanger',
+    res: 'cliff hanger',
     name: 'Cliff-Hanger',
-    content: 'Cliff Hangers believe that they work most effectively when under the pressure of a deadline. Cliff Hangers like having an adrenaline rush to help them focus, but working under tight deadlines often doesn"t leave enough time to check work thoroughly or to handle things that might go wrong. Waiting to start until the last moment often causes added stress, tension and even missed deadlines.',
-   }
+    content: 'Cliff Hangers believe that they work most effectively when under the pressure of a deadline. Cliff Hangers like having an adrenaline rush to help them focus, but working under tight deadlines often doesn\'t leave enough time to check work thoroughly or to handle things that might go wrong. Waiting to start until the last moment often causes added stress, tension and even missed deadlines.',
+    advice: 'Cliff Hangers need to monitor their time to better estimate how long things really take to complete. They will benefit by identifying their highest priorities and scheduling earlier start dates for those tasks. If they still choose to procrastinate, it should be on the less significant priorities.',
+  }
    ]
 
   const { register, handleSubmit, formState: { errors, isValid } } = useForm({mode: "onChange"});
@@ -284,9 +290,16 @@ else {
     fontFamily: 'sans-serif',
   };
 return (<div>
+        <div className="resultHead"><h3>Quiz Results</h3></div>
         <div className="resultContainer">
-    <div className="resultHead"><h3>Quiz Results</h3></div>
-    <div className="resultBody"><p>{result.content} {result.name}</p></div>
+    <div className="resultBody"><p>Your time management type:</p>
+    <p>{result.name}</p>
+    <p>What is like to be a {result.name}?</p>
+    <p>{result.content}</p>
+    <p>Time management advice for:</p>
+    <p>{result.name}</p>
+    <p>{result.advice}</p>
+    </div>
     <div className="pieChart"><PieChart
   data={[
     { title: 'Hyperfocus', value: 17, color: '#9AA5FD' },
