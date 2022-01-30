@@ -117,15 +117,11 @@ margin: 0px 150px 0 15px;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 800px;
+  height: 900px;
 }
-
-.resultHead {
-  padding: 0 24px;
-  width: 648px;
-}
-
 .resultBody {
+  display: flex;
+  flex-direction: column;
   background-color: #fdf6f4;
   padding: 24px 24px;
   border-radius: 10px;
@@ -160,17 +156,25 @@ letter-spacing: 0.1px;
   border-radius: 8px;
 }
 
+.resultButton {
+  
+}
+
+.pieContainer {
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-items: center;
+ height: 650px;
+}
+
 .pieChart {
   display: flex;
   flex-direction: column;
+  align-self:flex-start;
   width: 364px;
   height: 364px;
   font-weight: bold;
-}
-
-.piechart label {
-  width:30px;
-  display: inline-block;
 }
 
 label {

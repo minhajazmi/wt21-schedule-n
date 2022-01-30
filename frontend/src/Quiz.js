@@ -292,17 +292,18 @@ return (<div>
         <div>
         <h2>Quiz Results</h2>
     <div className="resultBody"><h1>Your time management type:</h1>
-    <h2>{result.name}</h2>
+    <div><h2>{result.name}</h2>
     <h3>What is like to be a {result.name}?</h3>
     <p>{result.content}</p>
     <hr></hr>
     <h1>Time management advice for:</h1>
     <h2>{result.name}</h2>
     <p>{result.advice}</p>
-    <div><button className="primaryButton" onClick={() => navigate("/signup")}>Sign up to save your result</button></div>
+    </div>
+    <div className="resultButton"><button className="primaryButton" onClick={() => navigate("/signup")}>Sign up to save your result</button></div>
     </div>
     </div>
-    <div>
+    <div className="pieContainer">
     <div><p>time management type average between people</p></div>
     <div className="pieChart"><PieChart
   data={[
