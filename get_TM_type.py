@@ -8,8 +8,9 @@ Created on Sun Jan 23 03:30:27 2022
 This function convert user input into time management (TM) types
 
 Input:  - .json file of user TM questionnaire answer
-Output: - a string of the name of the TM type ('Hooper'/'Perfectionist'/'Implusive'
-        /'Cliff hanger'/'Big idea'/'Hyperfocus')
+Output: - a dictionary object containing the name of the TM type, e.g., 
+        {'TM_type':'Hooper'}, {'TM_type':'Perfectionist'}, {'TM_type':'Implusive'},
+        {'TM_type':'Cliff hanger'}, {'TM_type':'Big idea'}, {'TM_type':'Hyperfocus'}
 """
 
 # get TM_type.py
@@ -20,19 +21,13 @@ def get_TM_type(user_answers):
     # This is the convention used to import Pandas.
     import pandas as pd
     import numpy as np
-    import json
+  #  import json
 
     #%% load data
     # These commands load the survey data 
     
-    # Open JSON file
-    f = open(user_answers)
-    
-    # load json file as a dictionary
-    data_dict = json.load(f, strict=False)
-    
     # convert dictionary to DataFrame
-    df = pd.DataFrame([data_dict])
+    df = pd.DataFrame([user_answers])
     
     
     #%% data feature
@@ -111,8 +106,15 @@ def get_TM_type(user_answers):
     #create new column in DataFrame that displays results of comparisons
     type_num_data['winner_type'] = np.select(conditions, choices, default='mixed type')
     
-    return type_num_data['winner_type'][0]
 
-if __name__ == '__main__':
-    # call get_TM_type func
-    get_TM_type()
+    #%% save TM type of user as a dictionary object
+    
+    user_TM_type = {
+            'TM_type': type_num_data['winner_type'][0]
+            }
+    
+    return user_TM_type
+
+#if __name__ == '__main__':
+#    # call get_TM_type func
+#    get_TM_type()
