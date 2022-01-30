@@ -72,7 +72,7 @@ function Quiz() {
       <p>Begin by taking this quiz to find out your time management style, so we know which advice will work best for you</p>
       </div> 
     <form onSubmit={handleSubmit(onSubmit)} className="quizForm">
-    <div className="quizOptions"><p>completely disagree:completely agree</p></div>
+    <div className="quizOptions"><p>completely disagree</p><p>completely agree</p></div>
     <div className="radioContainer"> 
     <label>I enjoy working on more than one project at a time.</label>
       <input {...register("enjoy", { required: true })} type="radio" value="completelyDisagree" />
@@ -82,7 +82,7 @@ function Quiz() {
       <input {...register("enjoy", { required: true })} type="radio" value="completelyAgree" />
     </div>
     <div className="radioContainer">
-    <label>If I have choice, I prefer to work alone rather than group work.</label>
+    <label>If I have the choice, I prefer to work alone rather than group work.</label>
       <input {...register("choice", { required: true })} type="radio" value="completelyDisagree" />
       <input {...register("choice", { required: true })} type="radio" value="IDisagree" />
       <input {...register("choice", { required: true })} type="radio" value="neutral" />
@@ -267,15 +267,15 @@ function Quiz() {
     </div>
     <div className="openQContainer">
        <label>What do you think/hope better time management can help you achieve?</label>
-        <div><input type="text" placeholder="Your answer" size="94" {...register("openQuestion1", {required: false, min: 2})} /></div>
+        <div><input type="text" placeholder="Your answer" size="107" {...register("openQuestion1", {required: false, min: 2})} /></div>
       </div>
       <div className="openQContainer"> 
       <label>Please tell us (as many as possible) the advice/methods/tools you find useful to you in your time management?</label>
-        <div><input type="text" placeholder="Your answer" size="94" {...register("openQuestion2", {required: false, min: 2})} /></div>
+        <div><input type="text" placeholder="Your answer" size="107" {...register("openQuestion2", {required: false, min: 2})} /></div>
       </div>  
       <div className="openQContainer"> 
       <label>Please tell us (as many as possible) the advice/methods/tools you find useless to you in your time management?</label>
-      <div><input type="text" placeholder="Your answer" size="94" {...register("openQuestion3", {required: false, min: 2})} /></div>
+      <div><input type="text" placeholder="Your answer" size="107" {...register("openQuestion3", {required: false, min: 2})} /></div>
   </div> 
   <div className='quizFooter'>
     <input type="submit" disabled={(!isValid)} className="primaryButton"/> 

@@ -69,8 +69,16 @@ h3 {
 }
 
 .quizOptions {
- align-self: flex-end;
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-end;
+ gap: 130px;
  color: #929094;
+ width: 785px;
+ font-weight: 500;
+ font-size: 14px;
+ line-height: 20px;
+ letter-spacing: 0.1px;
 }
 
 .quizForm {
@@ -105,6 +113,10 @@ box-shadow: 2px -5px 5px -5px rgba(0, 0, 0, 0.25);
   padding: 36px 0px;
   border-radius: 16px;
   width: 744px;
+}
+
+label {
+  flex-basis: 54%;
 }
 
 .openQContainer {
@@ -191,10 +203,6 @@ margin: 0 100px 0px 0px;
   width: 364px;
   height: 364px;
   font-weight: bold;
-}
-
-label {
-  flex-basis: 54%;
 }
 
 input[type="text"] {
