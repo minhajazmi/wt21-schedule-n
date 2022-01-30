@@ -317,24 +317,15 @@ return (<div>
   paddingAngle={1}
   startAngle={215}
   lineWidth={55}
-  label={({ x, y, dx, dy, dataEntry }) => (
-    <text
-      x={x}
-      y={x}
-      dx={dx}
-      dy={dy}
-      dominant-baseline="central"
-      text-anchor="middle"
-      style={{
-        fontSize: '4px',
-        fontWeight: '700',
-      }}
-    >
-      {dataEntry.title} {Math.round(dataEntry.percentage) + '%'}
-    </text>
-   )}
+  label={({ dataEntry }) => (dataEntry.title + ': ' + Math.round(dataEntry.percentage) +'%')}
      labelPosition={70}
-    /*fill: 'white'*/
+     labelStyle={(index) => ({
+      fill: index < 2 ? 'white' : '#1b1b1f',
+      fontSize: '4px',
+      fontWeight: '700',
+      float: 'left',
+      width: '30px',
+    })}
 /></div></div>
         </div>
         </div>

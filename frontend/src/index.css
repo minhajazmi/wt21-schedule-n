@@ -165,8 +165,12 @@ letter-spacing: 0.1px;
   flex-direction: column;
   width: 364px;
   height: 364px;
-  white-space: pre-line;
   font-weight: bold;
+}
+
+.piechart label {
+  width:30px;
+  display: inline-block;
 }
 
 label {
