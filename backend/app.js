@@ -34,10 +34,6 @@ app.listen(4000, () => {
     console.log(err);
   });
 
-  app.post("/questions", (req, res) => {
-    console.log("Testing the response", req.body);
-    res.send("hopper");
-  });
 
 
 
