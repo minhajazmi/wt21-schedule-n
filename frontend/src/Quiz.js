@@ -68,7 +68,7 @@ function Quiz() {
     <>
     <div className="quizContainer">
     <div className="quizOptions">
-       <p>1: completely not agree 4: completely agree</p>
+       <p>1: complete disagree 4: completely agree</p>
       </div> 
     <form onSubmit={handleSubmit(onSubmit)} className="quizForm">
     <div className="radioContainer"> 
@@ -288,8 +288,9 @@ function Quiz() {
 else {
   
 return (<div>
-        <div className="resultHead"><h2>Quiz Results</h2></div>
-        <div className="resultContainer">
+        <div className="resultContainer"> 
+        <div>
+        <h2>Quiz Results</h2>
     <div className="resultBody"><h1>Your time management type:</h1>
     <h2>{result.name}</h2>
     <h3>What is like to be a {result.name}?</h3>
@@ -300,8 +301,9 @@ return (<div>
     <p>{result.advice}</p>
     <div><button className="primaryButton" onClick={() => navigate("/signup")}>Sign up to save your result</button></div>
     </div>
+    </div>
     <div>
-    <div>time management type average between people</div>
+    <div><p>time management type average between people</p></div>
     <div className="pieChart"><PieChart
   data={[
     { title: 'Hyperfocus', value: 17, color: '#9AA5FD' },
@@ -318,7 +320,7 @@ return (<div>
   label={({ x, y, dx, dy, dataEntry }) => (
     <text
       x={x}
-      y={y}
+      y={x}
       dx={dx}
       dy={dy}
       dominant-baseline="central"
@@ -330,8 +332,8 @@ return (<div>
     >
       {dataEntry.title} {Math.round(dataEntry.percentage) + '%'}
     </text>
-  )}
-  labelPosition={70}
+   )}
+     labelPosition={70}
     /*fill: 'white'*/
 /></div></div>
         </div>

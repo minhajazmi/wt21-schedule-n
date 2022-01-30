@@ -117,7 +117,7 @@ margin: 0px 150px 0 15px;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 500px;
+  height: 800px;
 }
 
 .resultHead {
@@ -131,23 +131,24 @@ margin: 0px 150px 0 15px;
   border-radius: 10px;
   width: 648px;
   letter-spacing: 0.5px;
+  line-height: 24px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 
-.resultContainer h1 {
+.resultBody h1 {
   font-size: 28px;
   line-height: 36px;
   letter-spacing: 0;
 }
 
-.resultContainer h2 {
+.resultBody h2 {
   font-size: 24px;
   line-height: 32px;
   color: #1B1B1F;
 }
 
-.resultContainer h3 {
+.resultBody h3 {
 font-weight: 500;
 font-size: 16px;
 line-height: 24px;

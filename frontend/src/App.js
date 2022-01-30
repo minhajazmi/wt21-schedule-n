@@ -35,7 +35,7 @@ function Home() {
           <h2>Take a quiz and personalize your time management</h2>
         </div>
         <div className="buttonContainer">
-          <button className="primaryButton" onClick={() => navigate("/signup")}>
+          <button className="primaryButton" onClick={() => navigate("/quiz")}>
             Take a Quiz
           </button>
           <p>Learn about your type</p>
