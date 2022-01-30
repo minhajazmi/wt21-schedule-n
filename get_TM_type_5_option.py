@@ -38,19 +38,15 @@ def get_TM_type(user_answers):
     
     
     def text_to_score(a):
-         if a == "completely-disagree":
+         if a == "completelyDisagree":
              return 1
-         elif a == "I-disagree":
-             return 2
-         elif a == "I-disgree":
-             return 2
-         elif a == "I-disagre":
+         elif a == "IDisagree":
              return 2
          elif a == "neutral":
              return 3
-         elif a == "I-agree":
+         elif a == "IAgree":
              return 4
-         elif a == "completely-agree":
+         elif a == "completelyAgree":
              return 5 
     
     
