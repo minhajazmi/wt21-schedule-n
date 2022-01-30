@@ -8,8 +8,8 @@ Created on Sun Jan 23 03:47:19 2022
 
 #%% call for the function to get user Time management type
 
-user_answer = 'quizdata_edited.json' # here the file name will be dependent on our real file name
+user_answers = 'quizdata.json' # here the file name will be dependent on our real file name
 
 from get_TM_type import get_TM_type
 
-TM_type = get_TM_type(user_answer)
+TM_type = get_TM_type(user_answers)
