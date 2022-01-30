@@ -1,5 +1,14 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+from crypt import methods
+
+from flask import request
+from itsdangerous import json
+from app import app
+
+@app.route('/api/process', methods=['POST'])
+def processData():
+    data = request.json
+    return get_TM_type_as_Json(data)
+
 """
 Created on Sun Jan 23 03:30:27 2022
 
@@ -14,27 +23,25 @@ Output: - a string of the name of the TM type ('Hooper'/'Perfectionist'/'Implusi
 
 # get TM_type.py
 
-def get_TM_type():
+def get_TM_type_as_Json(user_answers):
     
     #%% import libraries
     # This is the convention used to import Pandas.
     import pandas as pd
     import numpy as np
     import json
-    import sys # help to read users answers by the backend,please dont delete.
-    user_answers = sys.argv[1]# helps to read the data node is sending to this python script
 
     #%% load data
     # These commands load the survey data 
     
     # Open JSON file
-    f = open(user_answers)
+    # f = open(user_answers)
     
     # load json file as a dictionary
-    data_dict = json.load(f, strict=False)
+    # data_dict = json.load(f, strict=False)
     
     # convert dictionary to DataFrame
-    df = pd.DataFrame([data_dict])
+    df = pd.DataFrame([user_answers])
     
     
     #%% data feature
@@ -49,8 +56,7 @@ def get_TM_type():
              return 1
          elif a == "I-disagree":
              return 2
-         # This is a typo, remove after change
-         elif a == "I-disagre":
+         elif a == "I-disgree":
              return 2
          elif a == "I-agree":
              return 3
@@ -114,8 +120,16 @@ def get_TM_type():
     #create new column in DataFrame that displays results of comparisons
     type_num_data['winner_type'] = np.select(conditions, choices, default='mixed type')
     
-    return type_num_data['winner_type'][0]
+    #%% return TM type of user as a string
+    
+    # return type_num_data['winner_type'][0]
 
-if __name__ == '__main__':
-    # call get_TM_type func
-    get_TM_type()
+    #%% save TM type of user as a Json file
+    
+    user_TM_type = {
+            'TM_type': type_num_data['winner_type'][0]
+            }
+    
+    return user_TM_type
+
+   
