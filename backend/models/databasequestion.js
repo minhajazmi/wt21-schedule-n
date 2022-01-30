@@ -81,6 +81,7 @@ const questionSchema = new mongoose.Schema({
   question27: {
     type: String,
   },
+  personalityType: String,
 });
 
 const Question = mongoose.model("Question", questionSchema);
