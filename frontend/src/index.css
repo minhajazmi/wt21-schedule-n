@@ -55,13 +55,22 @@ h3 {
   font-size: 11px;
 }
 
-.quizContainer{
+.quizContainer {
   overflow: scroll;
   position: absolute;
     top: 120px;
     left: 0;
     bottom: 80px;
     right: 0; 
+}
+
+.quizGreeting {
+  text-align: center;
+}
+
+.quizOptions {
+ align-self: flex-end;
+ color: #929094;
 }
 
 .quizForm {

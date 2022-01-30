@@ -21,7 +21,7 @@ const [secondPopup, setSecondPopup] = useState(false);
             <div className="headerItem2">
                 log in</div>
             <div className="headerItem2">
-                <button className="primaryButton" onClick={() => navigate("")}>Sign up for free</button>
+                <button className="primaryButton" onClick={() => navigate("/signup")}>Sign up for free</button>
             </div>
 
             <Popup trigger={firstPopup} setTrigger={setFirstPopup}>

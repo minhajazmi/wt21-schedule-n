@@ -3,9 +3,13 @@ import { useNavigate } from  'react-router-dom';
 
 function SignUp() {
 
-    return
+    return (
+    <div className="signUpContainer">
+    <div></div>
+    </div>
+    )
 
 }
 
 
-export default Quiz;
+export default SignUp;
