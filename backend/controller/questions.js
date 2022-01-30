@@ -1,34 +1,27 @@
 //functions that are going to be called by the router.
 const userModel = require("../models/databaseuser");
 const questionModel = require("../models/databasequestion");
-const { spawn } = require("child_process");
+const axios = require("axios").default;
 
-const saveQuestions = (req, res) => {
+const saveQuestions = async (req, res) => {
   const questionData = req.body;
-  console.log(questionData);
 
-  const question = new questionModel(questionData); // for every question answered,create a new instance of question
-  question.save().then((data) => {
-    const python = spawn("python", [
-      "get_TM_type.py",
-      JSON.stringify([questionData]),
-    ]); //call the python script
-    let dataToSend;
-    //collect dat from the script
-    python.stdout.on("data", function (data) {
-      console.log("Tmtype from the python script");
-      dataToSend = data.toString();
+  //  let question = new questionModel(questionData); // for every question answered,create a new instance of question
+  try {
+    const pyScriptRes = await axios.post(
+      "http://127.0.0.1:5000/api/process",
+      questionData
+    );
+    // question.personalityType = pyScriptRes.data['TM_type']
+    // await question.save()
+    res.json({
+      message: "This is the result of post",
+      pyScriptRes: pyScriptRes.data,
     });
-    //in close event we are sure that stream from child process is closed
-    python.on("close", (code) => {
-      console.log(`child process close all stdio with code ${code}`);
-      res.json({
-        message: "This is the result of post",
-        data,
-        dataToSend,
-      });
-    });
-  });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send(error);
+  }
 };
 const getAnswers = (req, res) => {
   res.send("This is your answer");

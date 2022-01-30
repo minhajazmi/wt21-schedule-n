@@ -16,8 +16,8 @@ app.use("/api", routes);
 
 //console.dir(app);
 
-app.listen(5000, () => {
-  console.log("Application start on port 5000");
+app.listen(4000, () => {
+  console.log("Application start on port 4000");
 });
 
 mongoose
