@@ -52,7 +52,7 @@ function Quiz() {
   const onSubmit = data => {
   console.log(errors);
 
-  axios.post('http://localhost:5000/questions', JSON.stringify(data))
+  axios.post('http://localhost:4000/questions', JSON.stringify(data))
        .then(response => {
       setResult(types.find(type => type.res === response.data));
       })
