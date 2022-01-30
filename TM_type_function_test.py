@@ -10,6 +10,6 @@ Created on Sun Jan 23 03:47:19 2022
 
 user_answers = 'quizdata.json' # here the file name will be dependent on our real file name
 
-from get_TM_type import get_TM_type
+from get_TM_type_as_Json import get_TM_type_as_Json
 
-TM_type = get_TM_type(user_answers)
+get_TM_type_as_Json(user_answers)
