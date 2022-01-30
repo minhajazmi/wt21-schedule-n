@@ -114,16 +114,14 @@ margin: 0px 150px 0 15px;
 
 .resultContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
   height: 500px;
 }
 
 .resultHead {
-  background-color: #efefff;
   padding: 0 24px;
-  border-radius: 10px;
   width: 648px;
 }
 
@@ -132,6 +130,42 @@ margin: 0px 150px 0 15px;
   padding: 24px 24px;
   border-radius: 10px;
   width: 648px;
+  letter-spacing: 0.5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.resultContainer h1 {
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: 0;
+}
+
+.resultContainer h2 {
+  font-size: 24px;
+  line-height: 32px;
+  color: #1B1B1F;
+}
+
+.resultContainer h3 {
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.1px;
+}
+
+.resultContainer hr {
+  border: 2px solid #F9E3DD;
+  border-radius: 8px;
+}
+
+.pieChart {
+  display: flex;
+  flex-direction: column;
+  width: 364px;
+  height: 364px;
+  white-space: pre-line;
+  font-weight: bold;
 }
 
 label {

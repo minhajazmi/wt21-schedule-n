@@ -1,16 +1,17 @@
 import React from 'react';
 
-function Result() {
-//let response = 
-    return (
-        <div className="resultContainer">
-    <div className="resultHead"><h3>My Quiz Result:</h3></div>
-    <div className="resultBody">lorem ipsum</div>
-    <div className="resultHead"><h3>My Advice:</h3></div>
-    <div className="resultBody">lorem ipsum</div>
-        </div>
-    )
-};
+const Result = ({types}) => {  
 
+const renderedItems = types.includes(type => {
+    return  <div key={type.name}>
+        <div className="resultContainer">
+    <div className="resultHead"><h3>My Quiz Result: {type.name}</h3></div>
+    <div className="resultBody"><p>{type.content}</p></div>
+        </div>
+        </div>
+});
+
+return <div>{renderedItems}</div>;
+};
 
 export default Result;
