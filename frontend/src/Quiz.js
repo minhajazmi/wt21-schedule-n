@@ -52,7 +52,7 @@ function Quiz() {
   const onSubmit = data => {
   console.log(errors);
 
-  axios.post('http://localhost:4000/questions', JSON.stringify(data))
+  axios.post('http://localhost:4000/api/questions', JSON.stringify(data))
        .then(response => {
       setResult(types.find(type => type.res === response.data));
       })
@@ -291,8 +291,10 @@ return (<div>
         <div className="resultContainer"> 
         <div>
         <h2>Quiz Results</h2>
-    <div className="resultBody"><h1>Your time management type:</h1>
-    <div><h2>{result.name}</h2>
+    <div className="resultBody">
+    <div className="resultText">
+    <h1>Your time management type:</h1>
+    <h2>{result.name}</h2>
     <h3>What is like to be a {result.name}?</h3>
     <p>{result.content}</p>
     <hr></hr>
@@ -307,10 +309,10 @@ return (<div>
     <div><p>time management type average between people</p></div>
     <div className="pieChart"><PieChart
   data={[
-    { title: 'Hyperfocus', value: 17, color: '#9AA5FD' },
+    { title: 'Hyper Focus', value: 17, color: '#9AA5FD' },
     { title: 'Impulsive', value: 17, color: '#4C57A9' },
     { title: 'Big Idea', value: 17, color: '#E07A5F' },
-    { title: 'Cliffhanger', value: 17, color: '#F0BEB0' },
+    { title: 'Cliff Hanger', value: 17, color: '#F0BEB0' },
     { title: 'Hopper', value: 17, color: '#F9E3DD' },
     { title: 'Perfectionist', value: 15, color: '#EFEFFF' },
   ]}

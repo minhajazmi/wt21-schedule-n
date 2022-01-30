@@ -117,8 +117,9 @@ margin: 0px 150px 0 15px;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 900px;
+  height: 1000px;
 }
+
 .resultBody {
   display: flex;
   flex-direction: column;
@@ -127,7 +128,7 @@ margin: 0px 150px 0 15px;
   border-radius: 10px;
   width: 648px;
   letter-spacing: 0.5px;
-  line-height: 24px;
+  line-height: 26px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
@@ -151,13 +152,19 @@ line-height: 24px;
 letter-spacing: 0.1px;
 }
 
-.resultContainer hr {
+.resultBody hr {
   border: 2px solid #F9E3DD;
   border-radius: 8px;
 }
 
+.resultText {
+margin: 0 100px 0px 0px;
+}
+
 .resultButton {
-  
+  align-self: flex-end;
+  //height: 100px;
+  margin: 70px 0 50px 0;
 }
 
 .pieContainer {
@@ -165,7 +172,7 @@ letter-spacing: 0.1px;
  flex-direction: column;
  justify-content: flex-start;
  align-items: center;
- height: 650px;
+ height: 780px;
 }
 
 .pieChart {
