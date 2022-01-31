@@ -69,8 +69,9 @@ function Quiz() {
     axios
       .post("http://localhost:4000/api/questions", data)
       .then((response) => {
-        console.log(response);
-        setResult(types.find((type) => type.res === response.data));
+        console.log(response.data.pyScriptRes.TM_type);
+        console.log(response.data);
+        setResult(types.find((type) => type.res === response.data.pyScriptRes.TM_type));
       })
       .catch((error) => {
         console.log(error);
