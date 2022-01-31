@@ -33,8 +33,3 @@ mongoose
     console.log("oh no,error!");
     console.log(err);
   });
-
-app.post("/questions", (req, res) => {
-  console.log("Testing the response", req.body);
-  res.send("hopper");
-});

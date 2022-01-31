@@ -1,7 +1,6 @@
 import { React } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Quiz from "./Quiz";
-import Result from "./Result";
 import Signup from "./Signup"
 import Header from "./Header";
 import Footer from "./Footer";
@@ -15,7 +14,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quiz" element={<Quiz />} />
-        <Route path="/result" element={<Result />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
       {location.pathname === "/" && <Footer />}
@@ -35,7 +33,7 @@ function Home() {
           <h2>Take a quiz and personalize your time management</h2>
         </div>
         <div className="buttonContainer">
-          <button className="primaryButton" onClick={() => navigate("/signup")}>
+          <button className="primaryButton" onClick={() => navigate("/quiz")}>
             Take a Quiz
           </button>
           <p>Learn about your type</p>

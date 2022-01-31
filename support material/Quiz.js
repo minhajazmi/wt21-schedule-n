@@ -1,4 +1,4 @@
-import {React, useState, useEffect } from 'react';
+import {React, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
@@ -44,7 +44,7 @@ function Quiz() {
   const onSubmit = data => {
   console.log(errors);
 
-  axios.post('http://localhost:5000/questions', JSON.stringify(data))
+  axios.post('http://localhost:4000/api/questions', JSON.stringify(data))
        .then(response => {
       setResult(types.find(type => type.res === response.data));
       })

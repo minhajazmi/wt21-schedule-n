@@ -55,13 +55,30 @@ h3 {
   font-size: 11px;
 }
 
-.quizContainer{
+.quizContainer {
   overflow: scroll;
   position: absolute;
     top: 120px;
     left: 0;
     bottom: 80px;
     right: 0; 
+}
+
+.quizGreeting {
+  text-align: center;
+}
+
+.quizOptions {
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-end;
+ gap: 130px;
+ color: #929094;
+ width: 785px;
+ font-weight: 500;
+ font-size: 14px;
+ line-height: 20px;
+ letter-spacing: 0.1px;
 }
 
 .quizForm {
@@ -98,6 +115,10 @@ box-shadow: 2px -5px 5px -5px rgba(0, 0, 0, 0.25);
   width: 744px;
 }
 
+label {
+  flex-basis: 54%;
+}
+
 .openQContainer {
   line-height: 24px;
   display: flex;
@@ -117,59 +138,71 @@ margin: 0px 150px 0 15px;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 500px;
-}
-
-.resultHead {
-  padding: 0 24px;
-  width: 648px;
+  height: 1000px;
 }
 
 .resultBody {
+  display: flex;
+  flex-direction: column;
   background-color: #fdf6f4;
   padding: 24px 24px;
   border-radius: 10px;
   width: 648px;
   letter-spacing: 0.5px;
+  line-height: 26px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 
-.resultContainer h1 {
+.resultBody h1 {
   font-size: 28px;
   line-height: 36px;
   letter-spacing: 0;
 }
 
-.resultContainer h2 {
+.resultBody h2 {
   font-size: 24px;
   line-height: 32px;
   color: #1B1B1F;
 }
 
-.resultContainer h3 {
+.resultBody h3 {
 font-weight: 500;
 font-size: 16px;
 line-height: 24px;
 letter-spacing: 0.1px;
 }
 
-.resultContainer hr {
+.resultBody hr {
   border: 2px solid #F9E3DD;
   border-radius: 8px;
+}
+
+.resultText {
+margin: 0 100px 0px 0px;
+}
+
+.resultButton {
+  align-self: flex-end;
+  //height: 100px;
+  margin: 70px 0 50px 0;
+}
+
+.pieContainer {
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-items: center;
+ height: 780px;
 }
 
 .pieChart {
   display: flex;
   flex-direction: column;
+  align-self:flex-start;
   width: 364px;
   height: 364px;
-  white-space: pre-line;
   font-weight: bold;
-}
-
-label {
-  flex-basis: 54%;
 }
 
 input[type="text"] {

@@ -64,12 +64,11 @@ function Quiz() {
   const [result, setResult] = useState(undefined);
 
   const onSubmit = (data) => {
-    console.log({ errors, data });
+    console.log(errors);
 
     axios
-      .post("http://localhost:4000/api/questions", data)
+      .post("http://localhost:4000/api/questions", JSON.stringify(data))
       .then((response) => {
-        console.log(response);
         setResult(types.find((type) => type.res === response.data));
       })
       .catch((error) => {
@@ -81,21 +80,29 @@ function Quiz() {
     return (
       <>
         <div className="quizContainer">
-          <div className="quizOptions">
-            <p>1: completely not agree 4: completely agree</p>
+          <div className="quizGreeting">
+            <h3>Start your journey here!</h3>
+            <p>
+              Begin by taking this quiz to find out your time management style,
+              so we know which advice will work best for you
+            </p>
           </div>
           <form onSubmit={handleSubmit(onSubmit)} className="quizForm">
+            <div className="quizOptions">
+              <p>completely disagree</p>
+              <p>completely agree</p>
+            </div>
             <div className="radioContainer">
               <label>I enjoy working on more than one project at a time.</label>
               <input
                 {...register("enjoy", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("enjoy", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("enjoy", { required: true })}
@@ -105,27 +112,28 @@ function Quiz() {
               <input
                 {...register("enjoy", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("enjoy", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
               <label>
-                If I have choice, I prefer to work alone rather than group work.
+                If I have the choice, I prefer to work alone rather than group
+                work.
               </label>
               <input
                 {...register("choice", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("choice", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("choice", { required: true })}
@@ -135,12 +143,12 @@ function Quiz() {
               <input
                 {...register("choice", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("choice", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
@@ -148,12 +156,12 @@ function Quiz() {
               <input
                 {...register("thrilled", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("thrilled", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("thrilled", { required: true })}
@@ -163,12 +171,12 @@ function Quiz() {
               <input
                 {...register("thrilled", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("thrilled", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
@@ -176,12 +184,12 @@ function Quiz() {
               <input
                 {...register("distraction", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("distraction", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("distraction", { required: true })}
@@ -191,68 +199,68 @@ function Quiz() {
               <input
                 {...register("distraction", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("distraction", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
               <label>I have high standard for my work or study</label>
               <input
-                {...register("high-standard", { required: true })}
+                {...register("highStandard", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
-                {...register("high-standard", { required: true })}
+                {...register("highStandard", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
-                {...register("high-standard", { required: true })}
+                {...register("highStandard", { required: true })}
                 type="radio"
                 value="neutral"
               />
               <input
-                {...register("high-standard", { required: true })}
+                {...register("highStandard", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
-                {...register("high-standard", { required: true })}
+                {...register("highStandard", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
               <label>I like to switch between tasks.</label>
               <input
-                {...register("switch-task", { required: true })}
+                {...register("switchTask", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
-                {...register("switch-task", { required: true })}
+                {...register("switchTask", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
-                {...register("switch-task", { required: true })}
+                {...register("switchTask", { required: true })}
                 type="radio"
                 value="neutral"
               />
               <input
-                {...register("switch-task", { required: true })}
+                {...register("switchTask", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
-                {...register("switch-task", { required: true })}
+                {...register("switchTask", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
@@ -260,12 +268,12 @@ function Quiz() {
               <input
                 {...register("focus", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("focus", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
               <input
                 {...register("focus", { required: true })}
@@ -275,12 +283,12 @@ function Quiz() {
               <input
                 {...register("focus", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("focus", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
             </div>
             <div className="radioContainer">
@@ -288,12 +296,12 @@ function Quiz() {
               <input
                 {...register("concentrate", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("concentrate", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("concentrate", { required: true })}
@@ -303,12 +311,12 @@ function Quiz() {
               <input
                 {...register("concentrate", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("concentrate", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
@@ -316,12 +324,12 @@ function Quiz() {
               <input
                 {...register("approval", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("approval", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("approval", { required: true })}
@@ -331,12 +339,12 @@ function Quiz() {
               <input
                 {...register("approval", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("approval", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
@@ -344,12 +352,12 @@ function Quiz() {
               <input
                 {...register("plan", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("plan", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("plan", { required: true })}
@@ -359,12 +367,12 @@ function Quiz() {
               <input
                 {...register("plan", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("plan", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
@@ -372,12 +380,12 @@ function Quiz() {
               <input
                 {...register("ideas", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("ideas", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("ideas", { required: true })}
@@ -387,12 +395,12 @@ function Quiz() {
               <input
                 {...register("ideas", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("ideas", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
@@ -400,12 +408,12 @@ function Quiz() {
               <input
                 {...register("procrastinate", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("procrastinate", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("procrastinate", { required: true })}
@@ -415,12 +423,12 @@ function Quiz() {
               <input
                 {...register("procrastinate", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("procrastinate", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
@@ -428,12 +436,12 @@ function Quiz() {
               <input
                 {...register("hard", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("hard", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("hard", { required: true })}
@@ -443,12 +451,12 @@ function Quiz() {
               <input
                 {...register("hard", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("hard", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
@@ -459,12 +467,12 @@ function Quiz() {
               <input
                 {...register("spontaneous", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("spontaneous", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("spontaneous", { required: true })}
@@ -474,12 +482,12 @@ function Quiz() {
               <input
                 {...register("spontaneous", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("spontaneous", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
@@ -489,12 +497,12 @@ function Quiz() {
               <input
                 {...register("finishing", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("finishing", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("finishing", { required: true })}
@@ -504,12 +512,12 @@ function Quiz() {
               <input
                 {...register("finishing", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("finishing", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
@@ -517,12 +525,12 @@ function Quiz() {
               <input
                 {...register("period", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("period", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("period", { required: true })}
@@ -532,12 +540,12 @@ function Quiz() {
               <input
                 {...register("period", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("period", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
@@ -545,12 +553,12 @@ function Quiz() {
               <input
                 {...register("priority", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("priority", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("priority", { required: true })}
@@ -560,12 +568,12 @@ function Quiz() {
               <input
                 {...register("priority", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("priority", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
@@ -575,12 +583,12 @@ function Quiz() {
               <input
                 {...register("gratification", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("gratification", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("gratification", { required: true })}
@@ -590,12 +598,12 @@ function Quiz() {
               <input
                 {...register("gratification", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("gratification", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
@@ -605,12 +613,12 @@ function Quiz() {
               <input
                 {...register("settled", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("settled", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("settled", { required: true })}
@@ -620,27 +628,27 @@ function Quiz() {
               <input
                 {...register("settled", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("settled", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
               <label>
-                I am usually the one who arrives late or miss an appointment.
+                I am always the one to arrive late or miss an appointment
               </label>
               <input
                 {...register("appointment", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("appointment", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("appointment", { required: true })}
@@ -650,25 +658,25 @@ function Quiz() {
               <input
                 {...register("appointment", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("appointment", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
-              <label>I am more productive when I am busier.</label>
+              <label>I am more productive when when I'm busy.</label>
               <input
                 {...register("productive", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("productive", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("productive", { required: true })}
@@ -678,25 +686,25 @@ function Quiz() {
               <input
                 {...register("productive", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("productive", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
-              <label>I tend to make decision at the last minute.</label>
+              <label>I tend to make decisions at the last minute.</label>
               <input
                 {...register("decision", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("decision", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("decision", { required: true })}
@@ -706,12 +714,12 @@ function Quiz() {
               <input
                 {...register("decision", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("decision", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
@@ -719,29 +727,29 @@ function Quiz() {
                 I focus on big picture more than details of the project.
               </label>
               <input
-                {...register("bigger-picture", { required: true })}
+                {...register("biggerPicture", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
-                {...register("bigger-picture", { required: true })}
+                {...register("biggerPicture", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
-                {...register("bigger-picture", { required: true })}
+                {...register("biggerPicture", { required: true })}
                 type="radio"
                 value="neutral"
               />
               <input
-                {...register("bigger-picture", { required: true })}
+                {...register("biggerPicture", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
-                {...register("bigger-picture", { required: true })}
+                {...register("biggerPicture", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="radioContainer">
@@ -751,12 +759,12 @@ function Quiz() {
               <input
                 {...register("deadline", { required: true })}
                 type="radio"
-                value="completely-disagree"
+                value="completelyDisagree"
               />
               <input
                 {...register("deadline", { required: true })}
                 type="radio"
-                value="I-disgree"
+                value="IDisagree"
               />
               <input
                 {...register("deadline", { required: true })}
@@ -766,51 +774,52 @@ function Quiz() {
               <input
                 {...register("deadline", { required: true })}
                 type="radio"
-                value="I-agree"
+                value="IAgree"
               />
               <input
                 {...register("deadline", { required: true })}
                 type="radio"
-                value="completely-agree"
+                value="completelyAgree"
               />
             </div>
             <div className="openQContainer">
               <label>
-                What do you think/hope time management can help you to do?
+                What do you think/hope better time management can help you
+                achieve?
               </label>
               <div>
                 <input
                   type="text"
                   placeholder="Your answer"
-                  size="94"
+                  size="107"
                   {...register("openQuestion1", { required: false, min: 2 })}
                 />
               </div>
             </div>
             <div className="openQContainer">
               <label>
-                Please tell us (as many as possible) the advices/methods/tools
+                Please tell us (as many as possible) the advice/methods/tools
                 you find useful to you in your time management?
               </label>
               <div>
                 <input
                   type="text"
                   placeholder="Your answer"
-                  size="94"
+                  size="107"
                   {...register("openQuestion2", { required: false, min: 2 })}
                 />
               </div>
             </div>
             <div className="openQContainer">
               <label>
-                Please tell us (as many as possible) the advices/methods/tools
+                Please tell us (as many as possible) the advice/methods/tools
                 you find useless to you in your time management?
               </label>
               <div>
                 <input
                   type="text"
                   placeholder="Your answer"
-                  size="94"
+                  size="107"
                   {...register("openQuestion3", { required: false, min: 2 })}
                 />
               </div>
@@ -829,37 +838,41 @@ function Quiz() {
   } else {
     return (
       <div>
-        <div className="resultHead">
-          <h2>Quiz Results</h2>
-        </div>
         <div className="resultContainer">
-          <div className="resultBody">
-            <h1>Your time management type:</h1>
-            <h2>{result.name}</h2>
-            <h3>What is like to be a {result.name}?</h3>
-            <p>{result.content}</p>
-            <hr></hr>
-            <h1>Time management advice for:</h1>
-            <h2>{result.name}</h2>
-            <p>{result.advice}</p>
-            <div>
-              <button
-                className="primaryButton"
-                onClick={() => navigate("/signup")}
-              >
-                Sign up to save your result
-              </button>
+          <div>
+            <h2>Quiz Results</h2>
+            <div className="resultBody">
+              <div className="resultText">
+                <h1>Your time management type:</h1>
+                <h2>{result.name}</h2>
+                <h3>What is like to be a {result.name}?</h3>
+                <p>{result.content}</p>
+                <hr></hr>
+                <h1>Time management advice for:</h1>
+                <h2>{result.name}</h2>
+                <p>{result.advice}</p>
+              </div>
+              <div className="resultButton">
+                <button
+                  className="primaryButton"
+                  onClick={() => navigate("/signup")}
+                >
+                  Sign up to save your result
+                </button>
+              </div>
             </div>
           </div>
-          <div>
-            <div>time management type average between people</div>
+          <div className="pieContainer">
+            <div>
+              <p>time management type average between people</p>
+            </div>
             <div className="pieChart">
               <PieChart
                 data={[
-                  { title: "Hyperfocus", value: 17, color: "#9AA5FD" },
+                  { title: "Hyper Focus", value: 17, color: "#9AA5FD" },
                   { title: "Impulsive", value: 17, color: "#4C57A9" },
                   { title: "Big Idea", value: 17, color: "#E07A5F" },
-                  { title: "Cliffhanger", value: 17, color: "#F0BEB0" },
+                  { title: "Cliff Hanger", value: 17, color: "#F0BEB0" },
                   { title: "Hopper", value: 17, color: "#F9E3DD" },
                   { title: "Perfectionist", value: 15, color: "#EFEFFF" },
                 ]}
@@ -867,24 +880,20 @@ function Quiz() {
                 paddingAngle={1}
                 startAngle={215}
                 lineWidth={55}
-                label={({ x, y, dx, dy, dataEntry }) => (
-                  <text
-                    x={x}
-                    y={y}
-                    dx={dx}
-                    dy={dy}
-                    dominant-baseline="central"
-                    text-anchor="middle"
-                    style={{
-                      fontSize: "4px",
-                      fontWeight: "700",
-                    }}
-                  >
-                    {dataEntry.title} {Math.round(dataEntry.percentage) + "%"}
-                  </text>
-                )}
+                label={({ dataEntry }) =>
+                  dataEntry.title +
+                  ": " +
+                  Math.round(dataEntry.percentage) +
+                  "%"
+                }
                 labelPosition={70}
-                /*fill: 'white'*/
+                labelStyle={(index) => ({
+                  fill: index < 2 ? "white" : "#1b1b1f",
+                  fontSize: "4px",
+                  fontWeight: "700",
+                  float: "left",
+                  width: "30px",
+                })}
               />
             </div>
           </div>

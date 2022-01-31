@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Popup from "./PopUp";
 import "./Header.css";
-import logo from "./images/Logo.svg";
+import logo from "./images/logo.svg";
 
 function Header() {
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ function Header() {
       </div>
       <div className="headerItem2">log in</div>
       <div className="headerItem2">
-        <button className="primaryButton" onClick={() => navigate("")}>
+        <button className="primaryButton" onClick={() => navigate("/signup")}>
           Sign up for free
         </button>
       </div>
