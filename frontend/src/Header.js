@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Popup from "./PopUp";
 import "./Header.css";
-import logo from "./images/logo.svg";
+import logo from "./images/Logo.svg";
 
 function Header() {
   const navigate = useNavigate();
