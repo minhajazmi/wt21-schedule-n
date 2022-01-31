@@ -15,7 +15,7 @@ function Header() {
       </div>
       <div className="headerItem1">
         <h1 onClick={() => setFirstPopup(true)}>
-          What is a time management style?
+          Time management style
         </h1>
       </div>
       <div className="headerItem1">

@@ -3,7 +3,7 @@ import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Quiz from "./Quiz";
 import Signup from "./Signup"
 import Header from "./Header";
-import Footer from "./Footer";
+//import Footer from "./Footer";
 import clock from "./images/clock.svg";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
-      {location.pathname === "/" && <Footer />}
+  {/*   {location.pathname === "/" && <Footer />}    */}
     </div>
   );
 }

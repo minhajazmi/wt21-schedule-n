@@ -5,6 +5,7 @@ import { PieChart } from "react-minimal-pie-chart";
 import axios from "axios";
 
 function Quiz() {
+  const shiftSize = 7;
   const types = [
     {
       res: "hopper",
@@ -13,6 +14,7 @@ function Quiz() {
         "Hoppers enjoy variety and the spontaneity of switching tasks frequently, but may have trouble completing all the open items on their task list. Hoppers enjoy change of pace, and the freedom to switch from one activity to another. They may often be easily distracted, however, and thereby run the risk of going off-track and not finishing what they start. Having too many open items simultaneously can ultimately cause them to be unproductive.",
       advice:
         "When possible, Hoppers should eliminate distractions to offer themselves more uninterrupted chunks of time in which to finish tasks. Timers may help them stay on track. They will also find it helpful to be aware of shifts in their energy levels to recognize when they need to take a break and thereby reduce the odds of being distracted.",
+      pie: 4,
     },
     {
       res: "hyperfocus",
@@ -21,6 +23,7 @@ function Quiz() {
         "The Hyper Focus style is absorbed by detail but may have trouble stopping one activity to transition to something new. This style preference gets so involved in what they are doing that they may ignore reminders and cues to move on to the next priority. When Hyper Focus people are deeply involved in the task at hand, they can become so absorbed in the details, that they can lose track of time.",
       advice:
         "It's important for Hyper Focus people to work from a prescribed plan and create natural bridges with strategies for moving from task to task. They can benefit from using backwards planning and scheduling to determine necessary project phases and start/finish dates, as well as chunking time into 20 minute segments.",
+      pie: 0,
     },
     {
       res: "big idea",
@@ -29,6 +32,7 @@ function Quiz() {
         "Big Picture individuals are big thinkers but often leave the details out of their plans. They find details less attractive than global strategies and tasks that call for spontaneity. Their lofty vision and high speed of action can cause them to overlook or ignore the essential small pieces necessary for success.",
       advice:
         "Big Picture types are much more effective when partnered with people who will handle the details and follow-through on tasks. On their own, they need to create simple, basic routines to follow, write things down, and make sure that their communications are clear and precise.",
+      pie: 2,
     },
     {
       res: "perfectionist",
@@ -37,6 +41,7 @@ function Quiz() {
         "Perfectionist Plus types thrive on details and an endless pursuit to 'get things right'. Because of their very high personal standards, they believe that they should be able to do nearly everything themselves and do it all well. They may be overly concerned about others' approval and often have difficulty saying 'No' to the requests of others for their time.",
       advice:
         "Perfectionist Plus types must distinguish between high and low priority activities so that they can spend their time on those with the highest payoff. It's important for them to learn how to say no and to delegate tasks where possible so that they have room on their plate for the things they most enjoy.",
+      pie: 5,    
     },
     {
       res: "impulsive",
@@ -45,6 +50,7 @@ function Quiz() {
         "Impulsive types love to leap but may forget to look first. Enjoying the rush of adrenaline, they would rather act spontaneously than follow a preset plan. However, lack of planning, or diminishing its importance, can result in missed deadlines and letting others down. Impulsives tend to get bored easily andcan find routine and maintenance tasks distasteful.",
       advice:
         "It's helpful for Impulsive's to gain perspective by looking at the bigger picture in order to make better decisions. They will benefit from longer-term planning, routine reviews, and daily targets that allow time for spontaneity. Posting mantras, intentions and reminders of their overall goals will often help remind them to stay focused on their highest priorities.",
+      pie: 1,
     },
     {
       res: "cliff hanger",
@@ -53,6 +59,7 @@ function Quiz() {
         "Cliff Hangers believe that they work most effectively when under the pressure of a deadline. Cliff Hangers like having an adrenaline rush to help them focus, but working under tight deadlines often doesn't leave enough time to check work thoroughly or to handle things that might go wrong. Waiting to start until the last moment often causes added stress, tension and even missed deadlines.",
       advice:
         "Cliff Hangers need to monitor their time to better estimate how long things really take to complete. They will benefit by identifying their highest priorities and scheduling earlier start dates for those tasks. If they still choose to procrastinate, it should be on the less significant priorities.",
+      pie: 3,
     },
   ];
   const navigate = useNavigate();
@@ -69,8 +76,8 @@ function Quiz() {
     axios
       .post("http://localhost:4000/api/questions", data)
       .then((response) => {
-        console.log(response.data.pyScriptRes.TM_type);
         console.log(response.data);
+        console.log(response.data.pyScriptRes.TM_type);
         setResult(types.find((type) => type.res === response.data.pyScriptRes.TM_type));
       })
       .catch((error) => {
@@ -856,29 +863,30 @@ function Quiz() {
               </div>
               <div className="resultButton">
                 <button
-                  className="primaryButton"
+                  className=""
                   onClick={() => navigate("/signup")}
                 >
-                  Sign up to save your result
+                  Sign up to learn more about your style
                 </button>
               </div>
             </div>
           </div>
           <div className="pieContainer">
             <div>
-              <p>time management type average between people</p>
+              <p>Explore how other people scored:</p>
             </div>
             <div className="pieChart">
               <PieChart
                 data={[
-                  { title: "Hyper Focus", value: 17, color: "#9AA5FD" },
-                  { title: "Impulsive", value: 17, color: "#4C57A9" },
-                  { title: "Big Idea", value: 17, color: "#E07A5F" },
-                  { title: "Cliff Hanger", value: 17, color: "#F0BEB0" },
-                  { title: "Hopper", value: 17, color: "#F9E3DD" },
-                  { title: "Perfectionist", value: 15, color: "#EFEFFF" },
+                  { title: "Hyper Focus", value: 14, color: "#9AA5FD" },
+                  { title: "Impulsive", value: 8, color: "#4C57A9" },
+                  { title: "Big Idea", value: 12, color: "#E07A5F" },
+                  { title: "Cliff Hanger", value: 24, color: "#F0BEB0" },
+                  { title: "Hopper", value: 22, color: "#F9E3DD" },
+                  { title: "Perfectionist", value: 20, color: "#EFEFFF" },
                 ]}
-                radius={50}
+                segmentsShift={(index) => (index === result.pie ? shiftSize : 0.5)}
+                radius={50 - shiftSize}
                 paddingAngle={1}
                 startAngle={215}
                 lineWidth={55}
