@@ -5,11 +5,11 @@ const axios = require("axios").default;
 
 const saveQuestions = async (req, res) => {
   const questionData = req.body;
-
+  const apiUrl = process.env.DS_API_URL ?? "localhost";
   //  let question = new questionModel(questionData); // for every question answered,create a new instance of question
   try {
     const pyScriptRes = await axios.post(
-      "http://127.0.0.1:5000/api/process",
+      `http://${apiUrl}:5000/api/process`,
       questionData
     );
     // question.personalityType = pyScriptRes.data['TM_type']
