@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import Popup from './PopUp';
 import PopUpLog from './PopUpLog';
 import SignUp from './Signup';
+import Login from './Login';
 import './Header.css';
 import logo from './images/logo.svg';
 
@@ -9,6 +10,7 @@ function Header() {
   const [firstPopup, setFirstPopup] = useState(false);
   const [secondPopup, setSecondPopup] = useState(false);
   const [signUpPopup, setSignUpPopup] = useState(false);
+  const [loginPopup, setLoginPopup] = useState(false);
 
   return (
     <div className="header">
@@ -23,7 +25,7 @@ function Header() {
       <div className="headerItem1">
         <h1 onClick={() => setSecondPopup(true)}>How does it work?</h1>
       </div>
-      <div className="headerItem2">log in</div>
+      <div className="headerItem2"><p onClick={() => setLoginPopup(true)}>log in</p></div>
       <div className="headerItem2">
         <button className="primaryButton" onClick={() => setSignUpPopup(true)}>
           Sign up for free
@@ -60,7 +62,7 @@ function Header() {
           </p>
         </div>
       </Popup>
-   {/*  <PopUpLog trigger={signUpPopup} setTrigger={setSignUpPopup}><Login /></PopUpLog>  */}
+     <PopUpLog trigger={loginPopup} setTrigger={setLoginPopup}><Login /></PopUpLog>
      <PopUpLog trigger={signUpPopup} setTrigger={setSignUpPopup}><SignUp /></PopUpLog> 
      <div>
      </div>
