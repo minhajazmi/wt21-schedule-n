@@ -8,6 +8,24 @@
     font-size: 40px;
   }
 
+  @media (min-width: 768px) {
+  
+    .header {
+      display: flex;
+      flex-wrap: row wrap;
+      justify-content: space-evenly;
+      height: 122px;
+    }
+  
+    .headerItem1 {
+      align-self: center;
+    }
+  
+    .headerItem2 {
+      align-self: center;
+    } 
+  }
+
   .popUp {
     position: fixed;
     display: flex;
@@ -47,24 +65,6 @@
     z-index: 3;
 }
 
-@media (min-width: 768px) {
-  
-  .header {
-    display: flex;
-    flex-wrap: row wrap;
-    justify-content: space-evenly;
-    height: 122px;
-  }
-
-  .headerItem1 {
-    align-self: center;
-  }
-
-  .headerItem2 {
-    align-self: center;
-  } 
-}
-
 .overlayLog {
   display: flex;
   justify-content: center;
@@ -98,10 +98,6 @@
   margin: 20px 20px;
 }
 
-.signUpTop {
-
-}
-
 .signUpForm {
   display: flex;
   flex-direction: column;
@@ -112,19 +108,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  height: 200px;
+  margin-top: 20px;
 }
 
 .signUpContainer i {
   position: absolute;
   top: 48%;
-  right: 15%;
+  right: 16%;
 }
 
-.signUpTop h1 {
+.signUpContainer h1 {
   text-align: center;
   color: #4C57A9;
-  font-size: 39px;
+  font-size: 38px;
   font-weight: 600;
   margin: 35px 0 0 0;
 }
@@ -132,6 +130,27 @@
 .signUpContainer p {
   color: #838383;
   font-size: 14px;
+}
+
+.hrSec {
+  width: 414px;
+  text-align: center;
+  color: #838383;
+  font-weight: bold;
+}
+
+.hrSec hr {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
 
 .signUpForm input[type="text"] {
@@ -142,9 +161,6 @@
   font-size: 14px;
   border-radius: 11px;
   margin: 0;
-}
-
-.signUpForm input[type="text"]:focus {
 }
 
 .signUpForm input[type="password"] {
@@ -178,6 +194,7 @@
   font-size: 14px;
   height: 45px;
   width: 414px;
+  margin-top: 5px;
 }
 
 .externalButton {

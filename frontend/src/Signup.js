@@ -14,7 +14,7 @@ function SignUp() {
     console.log(errors);
 
     return (
-      <div className="">
+      <div>
     <h1>Sign up</h1>
     <div className="signUpForm">
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -32,10 +32,11 @@ function SignUp() {
       <p>Between 8 and 72 Characters</p>
       <div><button type="submit" className="accountButton">Sign up for free</button></div>
     </form>
-    </div><div className="signUpConnect">
-    <div>Or</div>
+    </div>
+    <div className="signUpConnect">
+    <div className="hrSec"><hr class="left"/>Or<hr class="right" /></div>
     <div><button type="submit" className="externalButton">Continue with Google</button></div>
-    <div><button type="submit" className="externalButton">Continue with Google</button></div>
+    <div><button type="submit" className="externalButton">Continue with Facebook</button></div>
     <div><p>Already have an account? Log in</p></div>
     </div>
     </div>
