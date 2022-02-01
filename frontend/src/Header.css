@@ -64,3 +64,129 @@
     align-self: center;
   } 
 }
+
+.overlayLog {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 3;
+}
+
+.signUpContainer {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 135px;
+  align-items: center;
+  justify-content: flex-start;
+  background: #FDF6F4;
+  box-shadow: 0px 0.69px 4.14px 1.38px rgba(0, 0, 0, 0.16);
+  border-radius: 16px; 
+  width: 552px;
+  height: 670px;
+  gap: 1px;
+}
+
+.signUp {
+  position: fixed;
+  align-self: flex-end;
+  margin: 20px 20px;
+}
+
+.signUpTop {
+
+}
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  width: 414;
+}
+
+.signUpConnect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signUpContainer i {
+  position: absolute;
+  top: 48%;
+  right: 15%;
+}
+
+.signUpTop h1 {
+  text-align: center;
+  color: #4C57A9;
+  font-size: 39px;
+  font-weight: 600;
+  margin: 35px 0 0 0;
+}
+
+.signUpContainer p {
+  color: #838383;
+  font-size: 14px;
+}
+
+.signUpForm input[type="text"] {
+  color: '#FFFFFF';
+  font-family: inherit;
+  padding: 14px 20px 14px 20px;
+  border: 1px solid #838383;
+  font-size: 14px;
+  border-radius: 11px;
+  margin: 0;
+}
+
+.signUpForm input[type="text"]:focus {
+}
+
+.signUpForm input[type="password"] {
+  color: '#FFFFFF';
+  font-family: inherit;
+  padding: 14px 20px 14px 20px;
+  border: 1px solid #838383;
+  font-size: 14px;
+  border-radius: 11px;
+}
+
+.signUpForm input[type="password"]:focus {
+  outline: 0 none;
+}
+
+.signUpForm label {
+  display: block;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: left;
+  margin-bottom: 7px;
+  margin-top: 25px;
+}
+
+.accountButton {
+  background-color: #4c57a9;
+  border: 2px solid #4c57a9;
+  border-radius: 11px;
+  color: #ffffff;
+  font-family: "Josefin Sans";
+  font-size: 14px;
+  height: 45px;
+  width: 414px;
+}
+
+.externalButton {
+  background-color: #FFFFFF;
+  border: 1px solid #1B1B1F;
+  border-radius: 11px;
+  color: #1B1B1F;
+  font-family: "Josefin Sans";
+  font-size: 14px;
+  height: 45px;
+  width: 414px;
+}

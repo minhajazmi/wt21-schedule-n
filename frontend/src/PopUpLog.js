@@ -5,9 +5,8 @@ function popUpLog(props) {
     return (props.trigger) ? (
         <div className="overlayLog">
     <div className="signUpContainer">
-        <div className="popUpContainer">
-        <BsXLg onClick={() => props.setTrigger(false)} /></div>
-        <div>{ props.children } </div>
+    <div className="signUp"><BsXLg onClick={() => props.setTrigger(false)} /></div>
+        <div className="signUpTop">{ props.children } </div>
         </div>
      </div>
     ) : ""

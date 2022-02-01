@@ -60,6 +60,7 @@ function Header() {
           </p>
         </div>
       </Popup>
+   {/*  <PopUpLog trigger={signUpPopup} setTrigger={setSignUpPopup}><Login /></PopUpLog>  */}
      <PopUpLog trigger={signUpPopup} setTrigger={setSignUpPopup}><SignUp /></PopUpLog> 
      <div>
      </div>
