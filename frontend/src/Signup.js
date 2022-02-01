@@ -1,8 +1,6 @@
 import {React, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye } from 'react-icons/fa';
-import { BsXLg } from "react-icons/bs";
-
 
 function SignUp() {
     const eye = <FaEye />
@@ -17,8 +15,7 @@ function SignUp() {
 
     return (
       <div className="">
-    <div className="signUpContainer">
-    <h1>Sign Up</h1><BsXLg />
+    <h1>Sign Up</h1>
     <div className="signUpForm">
     <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -40,7 +37,6 @@ function SignUp() {
     <div><button type="submit" className="externalButton">Continue with Google</button></div>
     <div><button type="submit" className="externalButton">Continue with Google</button></div>
     <div><p>Already have an account? Log in</p></div>
-    </div>
     </div>
     )
 }

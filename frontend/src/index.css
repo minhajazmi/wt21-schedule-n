@@ -290,9 +290,23 @@ input:checked {
   border: 2px solid #929094;
 }
 
+.overlayLog {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 3;
+}
+
 .signUpContainer {
+  position: fixed;
   display: flex;
   flex-direction: column;
+  top: 135px;
   align-items: center;
   justify-content: space-evenly;
   background: #FDF6F4;

@@ -1,13 +1,15 @@
 import { React, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import Popup from "./PopUp";
-import "./Header.css";
-import logo from "./images/logo.svg";
+import Popup from './PopUp';
+import PopUpLog from './PopUpLog';
+import SignUp from './Signup';
+import './Header.css';
+import logo from './images/logo.svg';
 
 function Header() {
-  const navigate = useNavigate();
   const [firstPopup, setFirstPopup] = useState(false);
   const [secondPopup, setSecondPopup] = useState(false);
+  const [signUpPopup, setSignUpPopup] = useState(false);
+
   return (
     <div className="header">
       <div className="headerItem1">
@@ -23,7 +25,7 @@ function Header() {
       </div>
       <div className="headerItem2">log in</div>
       <div className="headerItem2">
-        <button className="primaryButton" onClick={() => navigate("/signup")}>
+        <button className="primaryButton" onClick={() => setSignUpPopup(true)}>
           Sign up for free
         </button>
       </div>
@@ -58,12 +60,14 @@ function Header() {
           </p>
         </div>
       </Popup>
+     <PopUpLog trigger={signUpPopup} setTrigger={setSignUpPopup}><SignUp /></PopUpLog> 
+     <div>
+     </div>
     </div>
   );
 }
 
 function Header2() {
-  const navigate = useNavigate();
   return (
     <div className="header">
       <div className="headerItem1">
@@ -73,7 +77,7 @@ function Header2() {
       <div className="headerItem1"></div>
       <div className="headerItem2"></div>
       <div className="headerItem2">
-        <button className="" onClick={() => navigate("")}>
+        <button className="" onClick={() => ("")}>
           home
         </button>
       </div>
