@@ -1,10 +1,10 @@
-import { React } from "react";
-import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
-import Quiz from "./Quiz";
-import Signup from "./Signup"
-import Header from "./Header";
+import { React } from 'react';
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import Quiz from './Quiz';
+import Signup from './Signup';
+import Header from './Header';
 //import Footer from "./Footer";
-import clock from "./images/clock.svg";
+import clock from './images/clock.svg';
 
 function App() {
   const location = useLocation();

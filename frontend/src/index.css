@@ -290,3 +290,75 @@ input:checked {
   background-color: #ffffff;
   border: 2px solid #929094;
 }
+
+.signUpContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #FDF6F4;
+  box-shadow: 0px 0.69px 4.14px 1.38px rgba(0, 0, 0, 0.16);
+  border-radius: 16px; 
+  width: 552px;
+  height: 670px;
+}
+
+.signUpForm {
+  width: 414;
+}
+
+.accountButton {
+  background-color: #4c57a9;
+  border: 2px solid #4c57a9;
+  border-radius: 11px;
+  color: #ffffff;
+  font-family: "Josefin Sans";
+  font-size: 14px;
+  height: 45px;
+  width: 414px;
+}
+
+.externalButton {
+  background-color: #FFFFFF;
+  border: 1px solid #1B1B1F;
+  border-radius: 11px;
+  color: #1B1B1F;
+  font-family: "Josefin Sans";
+  font-size: 14px;
+  height: 45px;
+  width: 414px;
+}
+
+.signUpContainer h1 {
+  color: #4C57A9;
+  font-size: 33px;
+  font-weight: 700;
+  line-height: 33px;
+}
+
+.signUpForm input[type="text"] {
+  color: '#FFFFFF';
+  margin: 15px;
+  font-family: inherit;
+  padding: 16px 20px 16px 20px;
+  border: 1px solid #838383;
+  font-size: 14px;
+  border-radius: 11px;
+}
+
+.signUpForm input[type="text"]:focus {
+}
+
+.signUpForm input[type="password"] {
+  color: '#FFFFFF';
+  margin: 15px;
+  font-family: inherit;
+  padding: 16px 20px 16px 20px;
+  border: 1px solid #838383;
+  font-size: 14px;
+  border-radius: 11px;
+}
+
+.signUpForm input[type="password"]:focus {
+  outline: 0 none;
+}
