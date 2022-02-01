@@ -3,7 +3,6 @@ body {
   background-color: #ffffff;
   color: #1b1b1f;
   font-size: 16px;
-  //overflow: hidden;
 }
 
 h1 {
@@ -115,7 +114,7 @@ box-shadow: 2px -5px 5px -5px rgba(0, 0, 0, 0.25);
   width: 744px;
 }
 
-label {
+.quizContainer label {
   flex-basis: 54%;
 }
 
@@ -307,6 +306,15 @@ input:checked {
   width: 414;
 }
 
+.signUpForm label {
+  display: block;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: left;
+  margin-bottom: 7px;
+  margin-top: 25px;
+}
+
 .accountButton {
   background-color: #4c57a9;
   border: 2px solid #4c57a9;
@@ -336,14 +344,19 @@ input:checked {
   line-height: 33px;
 }
 
+.signUpContainer p {
+  color: #838383;
+  font-size: 14px;
+}
+
 .signUpForm input[type="text"] {
   color: '#FFFFFF';
-  margin: 15px;
   font-family: inherit;
-  padding: 16px 20px 16px 20px;
+  padding: 14px 20px 14px 20px;
   border: 1px solid #838383;
   font-size: 14px;
   border-radius: 11px;
+  margin: 0;
 }
 
 .signUpForm input[type="text"]:focus {
@@ -351,9 +364,8 @@ input:checked {
 
 .signUpForm input[type="password"] {
   color: '#FFFFFF';
-  margin: 15px;
   font-family: inherit;
-  padding: 16px 20px 16px 20px;
+  padding: 14px 20px 14px 20px;
   border: 1px solid #838383;
   font-size: 14px;
   border-radius: 11px;
@@ -362,3 +374,10 @@ input:checked {
 .signUpForm input[type="password"]:focus {
   outline: 0 none;
 }
+
+.signUpContainer i {
+  position: absolute;
+  top: 38%;
+  right: 50%;
+}
+
