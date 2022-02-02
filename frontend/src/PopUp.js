@@ -1,13 +1,13 @@
 import React from 'react';
-import iconx from './images/iconx.svg';
+import { HiXCircle } from "react-icons/hi";
 
 function popUp(props) {
     return (props.trigger) ? (
         <div className="overlay">
     <div className="popUp">
         <div className="popUpContainer">
-        <img src={iconx} onClick={() => props.setTrigger(false)} /></div>
-        <div>{ props.children } </div>
+        <HiXCircle onClick={() => props.setTrigger(false)} /></div>
+        <div>{ props.children } </div> 
         </div>
      </div>
     ) : ""

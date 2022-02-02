@@ -57,7 +57,7 @@ h3 {
 .quizContainer {
   overflow: scroll;
   position: absolute;
-    top: 120px;
+    top: 130px;
     left: 0;
     bottom: 80px;
     right: 0; 
@@ -80,6 +80,9 @@ h3 {
  letter-spacing: 0.1px;
 }
 
+.quizOptionsNum {
+}
+
 .quizForm {
   display: flex;
   flex-direction: column;
@@ -93,8 +96,8 @@ h3 {
 .quizFooter {
 display: flex;
 flex-wrap: row wrap;
-justify-content: center;
 align-items: center;
+justify-content: end;
 position: fixed;
 background: #ffffff;
 bottom: 0;
@@ -102,6 +105,13 @@ height: 76px;
 width: 100%;
 box-shadow: 2px -5px 5px -5px rgba(0, 0, 0, 0.25);
 }
+
+.quizButtonContainer {
+  position:absolute;
+  left:50%;
+  margin-left:191px;
+  width:744px;
+} 
 
 .radioContainer {
   display: flex;

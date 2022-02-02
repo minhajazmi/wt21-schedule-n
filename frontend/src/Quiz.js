@@ -834,11 +834,11 @@ function Quiz() {
               </div>
             </div>
             <div className="quizFooter">
-              <input
+              <div className="quizButtonContainer"><input
                 type="submit"
                 disabled={!isValid}
                 className="primaryButton"
-              />
+              /></div>
             </div>
           </form>
         </div>
@@ -878,12 +878,12 @@ function Quiz() {
             <div className="pieChart">
               <PieChart
                 data={[
-                  { title: "Hyper Focus", value: 14, color: "#9AA5FD" },
-                  { title: "Impulsive", value: 8, color: "#4C57A9" },
-                  { title: "Big Idea", value: 12, color: "#E07A5F" },
-                  { title: "Cliff Hanger", value: 24, color: "#F0BEB0" },
-                  { title: "Hopper", value: 22, color: "#F9E3DD" },
-                  { title: "Perfectionist", value: 20, color: "#EFEFFF" },
+                  { title: "Hyper Focus", value: 17, color: "#9AA5FD" },
+                  { title: "Impulsive", value: 4, color: "#4C57A9" },
+                  { title: "Big Idea", value: 13, color: "#E07A5F" },
+                  { title: "Cliff Hanger", value: 13, color: "#F0BEB0" },
+                  { title: "Hopper", value: 9, color: "#F9E3DD" },
+                  { title: "Perfectionist", value: 44, color: "#EFEFFF" },
                 ]}
                 segmentsShift={(index) => (index === result.pie ? shiftSize : 0.5)}
                 radius={50 - shiftSize}
