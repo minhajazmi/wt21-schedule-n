@@ -66,6 +66,7 @@ function Header() {
           </p>
         </div>
       </Modal>
+    
      <ModalLog trigger={loginModal} setTrigger={setLoginModal}><Login /></ModalLog>
      <ModalLog trigger={signUpModal} setTrigger={setSignUpModal}><SignUp /></ModalLog> 
      <div>

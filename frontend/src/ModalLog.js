@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsXLg } from "react-icons/bs";
 
-function popUpLog(props) {
+function ModalLog(props) {
     return (props.trigger) ? (
         <div className="overlay">
     <div className="signUpContainer">
@@ -12,6 +12,6 @@ function popUpLog(props) {
     ) : ""
 }
 
-export default popUpLog;
+export default ModalLog;
 
 

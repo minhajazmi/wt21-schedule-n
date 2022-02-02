@@ -1,7 +1,7 @@
 import React from 'react';
 import { HiXCircle } from "react-icons/hi";
 
-function popUp(props) {
+function Modal(props) {
     return (props.trigger) ? (
         <div className="overlay">
     <div className="popUp">
@@ -13,5 +13,5 @@ function popUp(props) {
     ) : ""
 }
 
-export default popUp;
+export default Modal;
 
