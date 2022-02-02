@@ -80,6 +80,19 @@ h3 {
  letter-spacing: 0.1px;
 }
 
+.quizOptionsN {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 250px;
+  color: #929094;
+  width: 690px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+ }
+
 .quizOptionsNum {
 }
 
@@ -97,7 +110,7 @@ h3 {
 display: flex;
 flex-wrap: row wrap;
 align-items: center;
-justify-content: end;
+justify-content: flex-end;
 position: fixed;
 background: #ffffff;
 bottom: 0;
@@ -147,7 +160,7 @@ margin: 0px 150px 0 15px;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 1000px;
+  height: 900px;
 }
 
 .resultBody {
@@ -188,7 +201,7 @@ letter-spacing: 0.1px;
 }
 
 .resultText {
-margin: 0 90px 0 0;
+margin: 0 60px 0 0;
 }
 
 .resultButtonContainer {
@@ -207,7 +220,7 @@ margin: 0 90px 0 0;
  flex-direction: column;
  justify-content: flex-start;
  align-items: center;
- height: 780px;
+ height: 690px;
 }
 
 .pieChart {

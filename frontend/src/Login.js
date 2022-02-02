@@ -1,14 +1,16 @@
 import {React, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye } from 'react-icons/fa';
+import ModalLog from './ModalLog';
+import SignUp from './Signup';
 
-function SignUp() {
+function Login() {
     const eye = <FaEye />
     const [passwordShown, setPasswordShown] = useState(false);
     const togglePasswordVisiblity = () => {
       setPasswordShown(passwordShown ? false : true);
     };
-
+    const [signUpModal, setSignUpModal] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
     console.log(errors);
@@ -22,7 +24,7 @@ function SignUp() {
       <input type="text" placeholder="Name@email.com" size="60" {...register("email", {required: true, pattern: /^\S+@\S+$/i})} />
       <label>PASSWORD</label>
       <input type="password" placeholder="Enter your Password" type={passwordShown ? "text" : "password"} size="60" {...register("password", {required: true, min: 8, maxLength: 72})} />
-      <i className="eye" onClick={togglePasswordVisiblity}>{eye}</i>
+      <i className="eyeL" onClick={togglePasswordVisiblity}>{eye}</i>
       <p>Forgot password?</p>
       <div><button type="submit" className="accountButton">Login</button></div>
     </form>
@@ -32,10 +34,11 @@ function SignUp() {
     <div><button type="submit" className="externalButton">Continue with Google</button></div>
     <div><button type="submit" className="externalButton">Continue with Facebook</button></div>
     <div><button type="submit" className="externalButton">Continue with Apple</button></div>
-    <div><p>New to us? Sign up</p></div>
+    <div><p>New to us? <span onClick={() => setSignUpModal(true)}>Sign up</span></p></div>
     </div>
+    <ModalLog trigger={signUpModal} setTrigger={setSignUpModal}><SignUp /></ModalLog> 
     </div>
     )
 }
 
-export default SignUp;
+export default Login;

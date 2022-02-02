@@ -99,8 +99,12 @@ function Quiz() {
           </div>
           <form onSubmit={handleSubmit(onSubmit)} className="quizForm">
             <div className="quizOptions">
-              <p>completely disagree</p>
-              <p>completely agree</p>
+              <span>completely disagree</span>
+              <span>completely agree</span>
+            </div>
+            <div className="quizOptionsN">
+              <span>1</span>
+              <span>5</span>
             </div>
             <div className="radioContainer">
               <label>I enjoy working on more than one project at a time.</label>
@@ -863,11 +867,11 @@ function Quiz() {
                 <p>{result.advice}</p>
               </div>
               <div className="resultButtonContainer">
-                <a className="resultSignUp"
+                <span className="resultSignUp"
                   onClick={() => setSignUpModal(true)}
                 >
                   Sign up to learn more about your style
-                </a> 
+                </span> 
               </div>
             </div>
           </div>
@@ -896,10 +900,10 @@ function Quiz() {
                   Math.round(dataEntry.percentage) +
                   "%"
                 }
-                labelPosition={70}
+                labelPosition={73}
                 labelStyle={(index) => ({
                   fill: index < 2 ? "white" : "#1b1b1f",
-                  fontSize: "4px",
+                  fontSize: "3px",
                   fontWeight: "700",
                   float: "left",
                   width: "30px",
