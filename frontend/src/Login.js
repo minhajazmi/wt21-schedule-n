@@ -35,8 +35,8 @@ function Login() {
     <div><button type="submit" className="externalButton">Continue with Facebook</button></div>
     <div><button type="submit" className="externalButton">Continue with Apple</button></div>
     <div><p>New to us? <span onClick={() => setSignUpModal(true)}>Sign up</span></p></div>
-    </div>
     <ModalLog trigger={signUpModal} setTrigger={setSignUpModal}><SignUp /></ModalLog> 
+    </div>
     </div>
     )
 }

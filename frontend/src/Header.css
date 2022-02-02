@@ -65,6 +65,11 @@
     z-index: 3;
 }
 
+.loginConnect span, .signUpConnect span {
+color:#4C57A9;
+font-weight: bold;
+}
+
 .signUpContainer {
   position: fixed;
   display: flex;
