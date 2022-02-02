@@ -863,7 +863,7 @@ function Quiz() {
                 <p>{result.advice}</p>
               </div>
               <div className="resultButtonContainer">
-                <a className="resultButton"
+                <a className="resultSignUp"
                   onClick={() => setSignUpModal(true)}
                 >
                   Sign up to learn more about your style
