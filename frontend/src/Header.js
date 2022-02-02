@@ -1,16 +1,17 @@
 import { React, useState } from "react";
-import Popup from './PopUp';
-import PopUpLog from './PopUpLog';
+import Modal from './Modal';
+import ModalLog from './ModalLog';
 import SignUp from './Signup';
 import Login from './Login';
 import './Header.css';
 import logo from './images/logo.svg';
 
 function Header() {
-  const [firstPopup, setFirstPopup] = useState(false);
-  const [secondPopup, setSecondPopup] = useState(false);
-  const [signUpPopup, setSignUpPopup] = useState(false);
-  const [loginPopup, setLoginPopup] = useState(false);
+  const [firstModal, setFirstModal] = useState(false);
+  const [secondModal, setSecondModal] = useState(false);
+  const [thirdModal, setThirdModal] = useState(false);
+  const [signUpModal, setSignUpModal] = useState(false);
+  const [loginModal, setLoginModal] = useState(false);
 
   return (
     <div className="header">
@@ -18,21 +19,24 @@ function Header() {
         <img src={logo} alt="Logo" />
       </div>
       <div className="headerItem1">
-        <h1 onClick={() => setFirstPopup(true)}>
+        <h1 onClick={() => setFirstModal(true)}>
           Time management style
         </h1>
       </div>
       <div className="headerItem1">
-        <h1 onClick={() => setSecondPopup(true)}>How does it work?</h1>
+        <h1 onClick={() => setSecondModal(true)}>How does it work?</h1>
       </div>
-      <div className="headerItem2"><p onClick={() => setLoginPopup(true)}>log in</p></div>
+      <div className="headerItem1">
+        <h1 onClick={() => setThirdModal(true)}>Team</h1>
+      </div>
+      <div className="headerItem2"><p onClick={() => setLoginModal(true)}>log in</p></div>
       <div className="headerItem2">
-        <button className="primaryButton" onClick={() => setSignUpPopup(true)}>
+        <button className="primaryButton" onClick={() => setSignUpModal(true)}>
           Sign up for free
         </button>
       </div>
 
-      <Popup trigger={firstPopup} setTrigger={setFirstPopup}>
+      <Modal trigger={firstModal} setTrigger={setFirstModal}>
         <div>
           <h2>What is a time management style?</h2>
           <p>
@@ -47,8 +51,8 @@ function Header() {
           </p>
           Start your journey by taking our quiz!
         </div>
-      </Popup>
-      <Popup trigger={secondPopup} setTrigger={setSecondPopup}>
+      </Modal>
+      <Modal trigger={secondModal} setTrigger={setSecondModal}>
         <div>
           <h2>How does it work?</h2>
           <p>
@@ -61,31 +65,14 @@ function Header() {
             spend more time being produtcive
           </p>
         </div>
-      </Popup>
-     <PopUpLog trigger={loginPopup} setTrigger={setLoginPopup}><Login /></PopUpLog>
-     <PopUpLog trigger={signUpPopup} setTrigger={setSignUpPopup}><SignUp /></PopUpLog> 
+      </Modal>
+     <ModalLog trigger={loginModal} setTrigger={setLoginModal}><Login /></ModalLog>
+     <ModalLog trigger={signUpModal} setTrigger={setSignUpModal}><SignUp /></ModalLog> 
      <div>
      </div>
     </div>
   );
 }
 
-function Header2() {
-  return (
-    <div className="header">
-      <div className="headerItem1">
-        <img src={logo} alt="Logo" />
-      </div>
-      <div className="headerItem1"></div>
-      <div className="headerItem1"></div>
-      <div className="headerItem2"></div>
-      <div className="headerItem2">
-        <button className="" onClick={() => ("")}>
-          home
-        </button>
-      </div>
-    </div>
-  );
-}
 
 export default Header;

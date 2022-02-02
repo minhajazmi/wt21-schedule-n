@@ -118,7 +118,7 @@
 
 .signUpContainer i {
   position: absolute;
-  top: 34.5%;
+  top: 48%;
   right: 16%;
 }
 
@@ -204,6 +204,16 @@
   height: 45px;
   width: 414px;
   margin-top: 5px;
+}
+
+.accountButton:hover {
+  background-color: #9aa5fd;
+  border: 2px solid #9aa5fd;
+}
+
+.primaryButton:active {
+  background-color: #000965;
+  border: 2px solid #000965;
 }
 
 .externalButton {
