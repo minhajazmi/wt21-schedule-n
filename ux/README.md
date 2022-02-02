@@ -31,7 +31,7 @@ On this Notion you will read:
 **Define**
 1. [Affinity Diagram and User Persona](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#7f4ea22cc0174d1ca1cb5f93b6429caa)
 2. [Problem Statement (POV)](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#5fe3b2df862c4755b66afe9660e8b9c6)
-3. Value Proposition 
+3. [User Stories](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#de43d88a69184683b7551c55dc43ca92) 
 4. Business Goal
 
 **Ideate**  
@@ -45,8 +45,7 @@ On this Notion you will read:
 
 **Prototype**
 1. [Wireframing](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#709665d71b234cbc8b33e88130006589)  
-2. Usability Testing  
-3. Prototyping  
-4. Visual Design  
-5. Final Design and Features  
+2. [Usability Testing](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#2d094b94ac4d49f2a24fbf4ee365150d)  
+3. [UI Style Guide](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#2d094b94ac4d49f2a24fbf4ee365150d)  
+4. [Prototyping](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#2d094b94ac4d49f2a24fbf4ee365150d)  
     
