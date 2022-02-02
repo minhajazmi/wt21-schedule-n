@@ -1,11 +1,11 @@
-import { React, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useForm } from "react-hook-form";
-import { PieChart } from "react-minimal-pie-chart";
-import axios from "axios";
+import { React, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { PieChart } from 'react-minimal-pie-chart';
+import ModalLog from './ModalLog';
+import SignUp from './Signup'
+import axios from 'axios';
 
 function Quiz() {
-  const shiftSize = 7;
   const types = [
     {
       res: "hopper",
@@ -62,7 +62,8 @@ function Quiz() {
       pie: 3,
     },
   ];
-  const navigate = useNavigate();
+  const shiftSize = 7;
+  const [signUpModal, setSignUpModal] = useState(false);
   const {
     register,
     handleSubmit,
@@ -861,13 +862,12 @@ function Quiz() {
                 <h2>{result.name}</h2>
                 <p>{result.advice}</p>
               </div>
-              <div className="resultButton">
-                <button
-                  className=""
-                  onClick={() => navigate("/signup")}
+              <div className="resultButtonContainer">
+                <a className="resultButton"
+                  onClick={() => setSignUpModal(true)}
                 >
                   Sign up to learn more about your style
-                </button>
+                </a> 
               </div>
             </div>
           </div>
@@ -880,7 +880,7 @@ function Quiz() {
                 data={[
                   { title: "Hyper Focus", value: 17, color: "#9AA5FD" },
                   { title: "Impulsive", value: 4, color: "#4C57A9" },
-                  { title: "Big Idea", value: 13, color: "#E07A5F" },
+                  { title: "Big Picture", value: 13, color: "#E07A5F" },
                   { title: "Cliff Hanger", value: 13, color: "#F0BEB0" },
                   { title: "Hopper", value: 9, color: "#F9E3DD" },
                   { title: "Perfectionist", value: 44, color: "#EFEFFF" },
@@ -908,7 +908,9 @@ function Quiz() {
             </div>
           </div>
         </div>
+        <ModalLog trigger={signUpModal} setTrigger={setSignUpModal}><SignUp /></ModalLog>
       </div>
+      
     );
   }
 }

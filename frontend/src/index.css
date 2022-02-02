@@ -156,7 +156,7 @@ margin: 0px 150px 0 15px;
   background-color: #fdf6f4;
   padding: 24px 24px;
   border-radius: 10px;
-  width: 648px;
+  width: 579px;
   letter-spacing: 0.5px;
   line-height: 26px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
@@ -188,13 +188,18 @@ letter-spacing: 0.1px;
 }
 
 .resultText {
-margin: 0 100px 0px 0px;
+margin: 0 0 0 0;
 }
 
-.resultButton {
+.resultButtonContainer {
   align-self: flex-end;
-  //height: 100px;
-  margin: 70px 0 50px 0;
+}
+
+.resultSignUp {
+  color: #4C57A9;
+  letter-spacing: 0.1px;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .pieContainer {
