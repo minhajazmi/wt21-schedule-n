@@ -15,6 +15,7 @@
       flex-wrap: row wrap;
       justify-content: space-evenly;
       height: 122px;
+      box-shadow: 0px 15px 5px -15px rgba(0, 0, 0, 0.1);
     }
   
     .headerItem1 {
@@ -32,13 +33,13 @@
     flex-direction: column;
     top: 196px;
     background-color: #EFEFFE;
-    width: 845px;
-    height: 530px;
+    width: 755px;
+    height: 490px;
     border-radius: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     color: #47464A;
     font-size: 30px;
-    padding: 20px;
+    padding: 30px 45px 30px 45px;
     z-index: 4; 
    }
 
