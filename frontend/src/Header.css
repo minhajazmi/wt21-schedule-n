@@ -26,7 +26,7 @@
     } 
   }
 
-  .popUp {
+  .modal {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -42,11 +42,11 @@
     z-index: 4; 
    }
 
-   .popUpContainer {
+   .modalContainer {
      align-self: flex-end;
    }
 
-   .popUp button {
+   .modal button {
     border-radius: 20px;
     background-color: #47464A;
     border: solid #47464A;

@@ -4,8 +4,8 @@ import { HiXCircle } from "react-icons/hi";
 function Modal(props) {
     return (props.trigger) ? (
         <div className="overlay">
-    <div className="popUp">
-        <div className="popUpContainer">
+    <div className="modal">
+        <div className="modalContainer">
         <HiXCircle onClick={() => props.setTrigger(false)} /></div>
         <div>{ props.children } </div> 
         </div>
