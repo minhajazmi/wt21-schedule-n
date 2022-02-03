@@ -902,7 +902,7 @@ function Quiz() {
                 }
                 labelPosition={73}
                 labelStyle={(index) => ({
-                  fill: index < 2 ? "white" : "#1b1b1f",
+                  fill: index < 1 ? "white" : "#1b1b1f",
                   fontSize: "3px",
                   fontWeight: "700",
                   float: "left",
