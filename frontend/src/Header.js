@@ -64,7 +64,7 @@ function Header() {
           </p>
           <p>
             We’ve gathered advice from people just like you, so that you can
-            spend more time being produtcive
+            spend more time being productive
           </p>
         </div>
       </Modal>
