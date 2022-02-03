@@ -229,6 +229,22 @@ font-weight: bold;
   height: 45px;
   width: 414px;
 }
+.modalTeam {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    top: 100px;
+    background-color: #EFEFFE;
+    width: 755px;
+    height: 670px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #47464A;
+    font-size: 30px;
+    padding: 20px 20px 45px 45px;
+    z-index: 4; 
+}
 
 .teamContainer {
   font-size: 16px;
@@ -240,13 +256,20 @@ font-weight: bold;
 
 .teamImages {
 display: flex;
-flex-direction: row;
-}
-
-figcaption {
-  text-align: center;
+flex-direction: flex-row;
 }
 
 figure {
-  margin: 0 20px 0 0;
+  text-align: center;
+  margin: 0px 20px 0 20px;
+}
+
+figcaption {
+  margin: 5px 0 15px 0;
+}
+
+.overlay h2 {
+  font-size: 36px;
+  margin: 0 0 0 0;
+  font-weight: bold;
 }

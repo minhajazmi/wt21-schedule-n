@@ -11,16 +11,18 @@ function Team(props) {
     return (
     <div className="teamContainer">
         <h2>About Us</h2>
-        <h3>Meet Entire Team</h3>
-        <p>Scedule_N has created with this consideration that everyone could feel better in using their time if they can learn about their time management type based on personality and be provided with specific advice. So here we all get together to make it real. Our team includes three tracks UX, WD and DS. Scedule_N is the result of teamwork between three Tracks: WD, DS and UX. 
+        <h3>Meet The Entire Team</h3>
+        <p>Scedule_N has created with this consideration that everyone could feel better in using their time if they can learn about their time management type based on personality and be provided with specific advice. So here we all get together to make it real. Scedule_N is the result of teamwork between three Tracks: WD, DS and UX. 
         </p><div className="teamImages">
-        <figure><img src={Minhaj} /><figcaption>Minhaj</figcaption></figure>
-        <figure><img src={Suliyat} /><figcaption>Suliyat</figcaption></figure>
-        <figure><img src={Lina} /><figcaption>Lina</figcaption></figure>
-        <figure><img src={Xinhao} /><figcaption>Xinhao</figcaption></figure>
-        <figure><img src={Dela} /><figcaption>Dela</figcaption></figure>
-        <figure><img src={Clare} /><figcaption>Clare</figcaption></figure>
-        <figure><img src={Saba} /><figcaption>Saba</figcaption></figure>
+        <figure><img src={Minhaj} /><figcaption>WD</figcaption><figcaption>Minhaj Azmi</figcaption></figure>
+        <figure><img src={Suliyat} /><figcaption>WD</figcaption><figcaption>Suliyat Opeyemi</figcaption></figure>
+        <figure><img src={Lina} /><figcaption>WD</figcaption><figcaption>Angelina Blumenthal</figcaption></figure>
+        <figure><img src={Xinhao} /><figcaption>DS</figcaption><figcaption>Xinhao Wang</figcaption></figure>
+        <figure><img src={Dela} /><figcaption>DS</figcaption><figcaption>E. Delali Aggor</figcaption></figure>
+        </div>
+        <div className="teamImages">
+        <figure><img src={Clare} /><figcaption>UX</figcaption><figcaption>Clare Dunn</figcaption></figure>
+        <figure><img src={Saba} /><figcaption>UX</figcaption><figcaption>Saba Rezzadeh Harati</figcaption></figure>
         </div>
         <h3>Our Mission</h3>
         <p>Our mission is to help people improve their knowledge about themselves regarding time management to be more productive and use their time better in line with their personality and situation.

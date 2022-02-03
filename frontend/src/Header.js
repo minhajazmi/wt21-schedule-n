@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import Modal from './Modal';
 import ModalLog from './ModalLog';
+import ModalTeam from './ModalTeam';
 import Team from './Team'
 import SignUp from './Signup';
 import Login from './Login';
@@ -67,7 +68,7 @@ function Header() {
           </p>
         </div>
       </Modal>
-     <Modal trigger={thirdModal} setTrigger={setThirdModal}><Team/></Modal>
+     <ModalTeam trigger={thirdModal} setTrigger={setThirdModal}><Team/></ModalTeam>
      <ModalLog trigger={loginModal} setTrigger={setLoginModal}><Login /></ModalLog>
      <ModalLog trigger={signUpModal} setTrigger={setSignUpModal}><SignUp /></ModalLog> 
      <div>
