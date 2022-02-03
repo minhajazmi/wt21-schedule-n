@@ -7,7 +7,7 @@ import Header from './Header';
 import clock from './images/clock.svg';
 
 function App() {
-  const location = useLocation();
+  //const location = useLocation();
   return (
     <div>
       <Header />

@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import Modal from './Modal';
 import ModalLog from './ModalLog';
+import Team from './Team'
 import SignUp from './Signup';
 import Login from './Login';
 import './Header.css';
@@ -27,7 +28,7 @@ function Header() {
         <h1 onClick={() => setSecondModal(true)}>How does it work?</h1>
       </div>
       <div className="headerItem1">
-        <h1 onClick={() => setThirdModal(true)}>Team</h1>
+        <h1 onClick={() => setThirdModal(true)}>About us</h1>
       </div>
       <div className="headerItem2"><p onClick={() => setLoginModal(true)}>log in</p></div>
       <div className="headerItem2">
@@ -66,7 +67,7 @@ function Header() {
           </p>
         </div>
       </Modal>
-    
+     <Modal trigger={thirdModal} setTrigger={setThirdModal}><Team/></Modal>
      <ModalLog trigger={loginModal} setTrigger={setLoginModal}><Login /></ModalLog>
      <ModalLog trigger={signUpModal} setTrigger={setSignUpModal}><SignUp /></ModalLog> 
      <div>
