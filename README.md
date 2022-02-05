@@ -1,6 +1,6 @@
 # Schedule N
 > Outline a brief description of your project.
-> Live demo [_here_](https://www.example.com). <!-- Do we have the online version on digital ocean yet?   -->
+> Live demo [_here_](https://). <!-- Do we have the online version on digital ocean yet?   -->
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -28,8 +28,6 @@ Schedule N is an educative project implemented by students of TechLabs Berlin in
 
 ## Technologies Used
 
-Tech 1 - version 1.0
-
 - React & Hooks (Minimal Pie Chart, React Hook Form)
 - React Router
 - Axios
@@ -47,7 +45,7 @@ Tech 1 - version 1.0
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Example screenshot](./img/screenshot1.png)
 
 
 ## Setup
@@ -69,7 +67,6 @@ Now you have two options, run every dependency on its own or use everything comb
     ```sh
    docker-compose up
    ```
-
 
 ### Seperated dependencies (Windows)
 
@@ -97,7 +94,7 @@ Now you have two options, run every dependency on its own or use everything comb
     > venv\Scripts\activate
    ```
    ```sh
-   pip install Flask
+   pip install flask
    ```
 6. Run the server
     ```sh
@@ -140,18 +137,18 @@ To do:
 
 ## Team
 
-- DS  | Xinhao Wang
-- DS  | Dela 
-- WD  | Suliyat 
-- WD  | Minhaj
-- WD  | Angelina Blumenthal
-- UX  | Clare 
-- UX  | Saba
+- DS  | [Xinhao Wang](https://github.com/Xinhao221b)
+- DS  | [E. Delali Aggor]
+- WD  | [Suliyat Opeyemi](https://github.com/sullyheart)
+- WD  | [Minhaj Azmi](https://github.com/minhajazmi)
+- WD  | [Angelina Blumenthal](https://github.com/racketcat)
+- UX  | [Clare Dunn]
+- UX  | [Saba Rezzadeh Harati](https://github.com/sabarzh)
 
-- Mentors: WD  | Matheus Cardoso, DS  | Tiago Ignacio
+- Mentors: WD  | [Matheus Cardoso](https://github.com/cardoso), DS  | Tiago Ignacio
 
 ## Acknowledgements
-- This project was based on [this tutorial](https://www.example.com).
+- This quiz was based on [](https://).
 - Many thanks to TechLabs Berlin Team
 
 ## Contact
