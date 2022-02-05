@@ -60,15 +60,15 @@ Now you have two options, run every dependency on its own or use everything comb
 2. Download the [Docker](https://www.docker.com/get-started) application.
 
 3.  Run the application
-```bash
-docker-compose up
-```
+    ```bash
+    docker-compose up
+    ```
 
 ### Seperated dependencies (Windows)
 
  #### Node app  
 2. Install dependencies inside the `backend` directory
-    ```bash
+   ```bash
    npm install
    ```
 3. Run the app
@@ -77,39 +77,41 @@ docker-compose up
    ```
 #### Mongo DB and Mongoose
 
-3. Install [MongoDB](https://docs.mongodb.com/guides/server/install/)
+3. Install [MongoDB](https://docs.mongodb.com/guides/server/install/) <!-- Add Mongosh -->
 
 4. Install dependencies inside the `backend` directory
- ```bash
- install mongoose
-   
+   ```bash
+   install mongoose
    ```
 5. Run the database
- ```sh
+   ```bash
    
    ```
 #### Flask server
 6. Activate the environment and install dependencies inside the `DS-server` directory
-    ```bash
-    > venv\Scripts\activate
+   ```bash
+   > venv\Scripts\activate
    ```
    ```bash
    pip install flask
    ```
-7. Run the server
-    ```bash
+7. Install pandas
+   ```bash
+   pip install pandas
+   ```
+8. Run the server
+   ```bash
    flask run
    ```
  #### React app
-8. Install dependencies inside the `frontend` directory
+9. Install dependencies inside the `frontend` directory
    ```bash
    npm install
    ```
-9. Run the app
+10. Run the app
     ```bash
    npm start
    ```
-
 
 ## Usage
 
@@ -147,7 +149,7 @@ To do:
 
 ## Acknowledgements
 - This quiz was based on [](https://).
-- Many thanks to TechLabs Berlin Team
+- Many thanks to the TechLabs Berlin Team
 
 ## Contact
 
