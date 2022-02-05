@@ -1,5 +1,5 @@
 # Schedule N
-> Outline a brief description of your project.
+> Manage you time based on your personality and preferences
 > Live demo [_here_](https://). <!-- Do we have the online version on digital ocean yet?   -->
 
 ## Table of Contents
@@ -39,10 +39,6 @@ Schedule N is an educative project implemented by students of TechLabs Berlin in
 - Python3
 - Python libs: pandas, numpy, matplotlib
 
-## Features
-
-- Quiz about time manangement style
-
 
 ## Screenshots
 ![Example screenshot](./img/screenshot1.png)
@@ -61,18 +57,19 @@ Now you have two options, run every dependency on its own or use everything comb
 
 ### Via docker (easiest):
 
-2. Download the docker application. https://www.docker.com/get-started
+2. Download the [Docker](https://www.docker.com/get-started) application.
 
 3.  Run the application
     ```sh
    docker-compose up
    ```
 
+
 ### Seperated dependencies (Windows)
 
  #### Node app  
 2. Install dependencies inside the `backend` directory
-   ```sh
+    ```sh
    npm install
    ```
 3. Run the app
@@ -112,12 +109,12 @@ Now you have two options, run every dependency on its own or use everything comb
 
 
 ## Usage
-<!-- How does one go about using it?
-Provide various use cases and code examples here.
-For the Figma prototype see here. 
 
-`write-your-code-here`
--->
+[techstack](./img/techstack.png)
+
+Take the quiz about your time manangement style.
+
+For the Figma prototype see [here](https://www.figma.com/file/y52E1Exvi9uwlEfUhTzJsd/Project?node-id=105%3A1770)
 
 ## Project Status
 Project is: _in progress_. This repo is part of the TechLabs Berlin winter 21/22 Project Phase. Further updates are not timed yet.
@@ -138,11 +135,11 @@ To do:
 ## Team
 
 - DS  | [Xinhao Wang](https://github.com/Xinhao221b)
-- DS  | [E. Delali Aggor]
+- DS  | E. Delali Aggor
 - WD  | [Suliyat Opeyemi](https://github.com/sullyheart)
 - WD  | [Minhaj Azmi](https://github.com/minhajazmi)
 - WD  | [Angelina Blumenthal](https://github.com/racketcat)
-- UX  | [Clare Dunn]
+- UX  | Clare Dunn
 - UX  | [Saba Rezzadeh Harati](https://github.com/sabarzh)
 
 - Mentors: WD  | [Matheus Cardoso](https://github.com/cardoso), DS  | Tiago Ignacio
