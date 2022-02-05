@@ -110,7 +110,7 @@ Now you have two options, run every dependency on its own or use everything comb
 
 ## Usage
 
-[techstack](./img/techstack.png)
+![techstack](./img/techstack.png)
 
 Take the quiz about your time manangement style.
 
