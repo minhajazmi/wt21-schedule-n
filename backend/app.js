@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const routes = require("./routes/questions");
+const questionRoutes = require("./routes/questions");
+const userRoute = require("./routes/user");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
@@ -12,7 +13,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-app.use("/api", routes);
+app.use("/api", questionRoutes, userRoute);
+// app.use("/api", userRoute);
 
 //console.dir(app);
 
@@ -20,8 +22,13 @@ app.listen(4000, () => {
   console.log("Application start on port 4000");
 });
 
+const connectionStr = process.env.MONGODB_CONNECTION_STRING
+  ? process.env.MONGODB_CONNECTION_STRING
+  : "mongodb://127.0.0.1:27017/scheduleNApp";
+
+console.log("Connection string ´---->", connectionStr);
 mongoose
-  .connect("mongodb://mongo/scheduleNApp", {
+  .connect(connectionStr, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

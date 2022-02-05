@@ -4,9 +4,9 @@ const questionModel = require("../models/questionModel");
 const axios = require("axios").default;
 
 const saveQuestions = async (req, res) => {
-  const questionData = req.body;
+  const { userId, ...questionData } = req.body;
   const apiUrl = process.env.DS_API_URL ?? "localhost";
-  let question = new questionModel(questionData); // for every question answered,create a new instance of question
+  let question = new questionModel({ ...questionData, userId }); // for every question answered,create a new instance of question
   try {
     const pyScriptRes = await axios.post(
       `http://${apiUrl}:5000/api/process`,

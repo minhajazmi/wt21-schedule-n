@@ -7,17 +7,20 @@ const login = async (req, res) => {
       email: loginData.email,
       dob: loginData.dob,
     });
+    if (!userData) {
+      return res.status(404).send({ message: "user not found" });
+    }
     res.json({ userData });
   } catch (error) {
-    res.statusCode(404).send(error);
+    res.status(404).send(error);
   }
 };
 
-const signUp = (req, res) => {
+const signUp = async (req, res) => {
   const signUpData = req.body;
   const userData = new userModel(signUpData);
-  userData.save();
-  res.sender();
+  const newUserData = await userData.save();
+  res.json(newUserData);
 };
 module.exports = {
   login,
