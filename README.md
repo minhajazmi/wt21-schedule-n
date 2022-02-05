@@ -109,7 +109,7 @@ Now you have two options, run every dependency on its own or use everything comb
    npm install
    ```
 10. Run the app
-    ```bash
+   ```bash
    npm start
    ```
 
@@ -151,9 +151,9 @@ To do:
 - This quiz was based on [](https://).
 - Many thanks to the TechLabs Berlin Team
 
-## Contact
+<!-- ## Contact
 
-[@](https://) - feel free to contact us!
+[@] - feel free to contact us! -->
 
 ## License
 
