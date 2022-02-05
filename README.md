@@ -53,7 +53,7 @@ How to get a copy and locally run it:
    git clone https://github.com/TechLabs-Berlin/wt21-schedule-n.git
    ```
 
-Now you have two options, run every dependency on its own or use everything combined in docker.
+Now you have two options, run every port serperately on its own or use everything combined in docker.
 
 ### Via docker (easiest):
 
@@ -64,7 +64,7 @@ Now you have two options, run every dependency on its own or use everything comb
     docker-compose up
     ```
 
-### Seperated dependencies (Windows)
+### Single ports (Windows)
 
  #### Node app  
 2. Install dependencies inside the `backend` directory
