@@ -1,19 +1,19 @@
 //functions that are going to be called by the router.
-const userModel = require("../models/databaseuser");
-const questionModel = require("../models/databasequestion");
+const userModel = require("../models/userModel");
+const questionModel = require("../models/questionModel");
 const axios = require("axios").default;
 
 const saveQuestions = async (req, res) => {
   const questionData = req.body;
   const apiUrl = process.env.DS_API_URL ?? "localhost";
-  //  let question = new questionModel(questionData); // for every question answered,create a new instance of question
+  let question = new questionModel(questionData); // for every question answered,create a new instance of question
   try {
     const pyScriptRes = await axios.post(
       `http://${apiUrl}:5000/api/process`,
       questionData
     );
-    // question.personalityType = pyScriptRes.data['TM_type']
-    // await question.save()
+    question.personalityType = pyScriptRes.data["TM_type"];
+    await question.save();
     res.json({
       message: "This is the result of post",
       pyScriptRes: pyScriptRes.data,

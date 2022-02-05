@@ -15,71 +15,76 @@ const questionSchema = new mongoose.Schema({
   highStandard: {
     type: String,
   },
-  question6: {
+  switchTask: {
     type: String,
   },
-  question7: {
+  focus: {
     type: String,
   },
-  question8: {
+  concentrate: {
     type: String,
   },
-  question9: {
+  approval: {
     type: String,
   },
-  question10: {
+  plan: {
     type: String,
   },
-  question11: {
+  ideas: {
     type: String,
   },
-  question12: {
+  procrastinate: {
     type: String,
   },
-  question13: {
+  hard: {
     type: String,
   },
-  question14: {
+  spontaneous: {
     type: String,
   },
-  question15: {
+  finishing: {
     type: String,
   },
-  question16: {
+  period: {
     type: String,
   },
-  question17: {
+  priority: {
     type: String,
   },
-  question18: {
+  gratification: {
     type: String,
   },
-  question19: {
+  settled: {
     type: String,
   },
-  question20: {
+  appointment: {
     type: String,
   },
-  question21: {
+  productive: {
     type: String,
   },
-  question22: {
+  decision: {
     type: String,
   },
-  question23: {
+  biggerPicture: {
     type: String,
   },
-  question24: {
+  deadline: {
     type: String,
   },
-  question25: {
+  openQuestion1: {
     type: String,
   },
-  question26: {
+  openQuestion2: {
     type: String,
   },
-  question27: {
+  openQuestion3: {
     type: String,
+  },
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    autopopulate: true,
   },
   personalityType: String,
 });
