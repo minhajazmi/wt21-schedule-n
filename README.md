@@ -1,6 +1,6 @@
 # Schedule N
 > Outline a brief description of your project.
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
+> Live demo [_here_](https://www.example.com). <!-- Do we have the online version on digital ocean yet?   -->
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -14,7 +14,7 @@
 * [Team](#team)
 * [Acknowledgements](#acknowledgements)
 * [Contact](#contact)
-<!-- * [License](#license) -->
+* [License](#license)
 
 
 ## General Information
@@ -59,39 +59,68 @@ How to get a copy and locally run it:
    git clone https://github.com/TechLabs-Berlin/wt21-schedule-n.git
    ```
 
- #### Express app  
+Now you have two options, run every dependency on its own or use everything combined in docker.
+
+### Via docker (easiest):
+
+2. Download the docker application. https://www.docker.com/get-started
+
+3.  Run the application
+    ```sh
+   docker-compose up
+   ```
+
+
+### Seperated dependencies (Windows)
+
+ #### Node app  
 2. Install dependencies inside the `backend` directory
    ```sh
    npm install
    ```
 3. Run the app
     ```sh
-   npx nodemon index.js
+   npm start
    ```
-
-#### Flask server
-
 #### Mongo DB and Mongoose
-
+3. Install dependencies inside the `backend` directory
+ ```sh
+   
+   ```
+4. Run the database
+ ```sh
+   
+   ```
+#### Flask server
+5. Activate the environment and install dependencies inside the `DS-server` directory
+    ```sh
+    > venv\Scripts\activate
+   ```
+   ```sh
+   pip install Flask
+   ```
+6. Run the server
+    ```sh
+   flask run
+   ```
  #### React app
-4. Install dependencies inside the `frontend` directory
+7. Install dependencies inside the `frontend` directory
    ```sh
    npm install
    ```
-5. Run the app
+8. Run the app
     ```sh
    npm start
    ```
 
 
-
 ## Usage
-How does one go about using it?
+<!-- How does one go about using it?
 Provide various use cases and code examples here.
-For the Figma prototype see here.
+For the Figma prototype see here. 
 
 `write-your-code-here`
-
+-->
 
 ## Project Status
 Project is: _in progress_. This repo is part of the TechLabs Berlin winter 21/22 Project Phase. Further updates are not timed yet.
@@ -104,13 +133,10 @@ Room for improvement:
 - get users to rate advice and optimise algorhythm
 
 To do:
-- finish user account implemetation 
+- finish user account implemetation (mostly finished on backend site)
 - add seperate advice page with more specific tools (apps, methods...)
 - adjust media queries and browser compatibilty 
 
-## License
-
-Schedule N is intended solely for education purposes. The project is not intended for any commercial, monetary, or data sharing use.
 
 ## Team
 
@@ -122,22 +148,18 @@ Schedule N is intended solely for education purposes. The project is not intende
 - UX  | Clare 
 - UX  | Saba
 
-- Mentors: Matheus Cardoso, Tiago Ignacio
+- Mentors: WD  | Matheus Cardoso, DS  | Tiago Ignacio
 
 ## Acknowledgements
-Give credit here.
-- This project was inspired by...
 - This project was based on [this tutorial](https://www.example.com).
 - Many thanks to TechLabs Berlin Team
 
-
 ## Contact
-[@](https://) - feel free to contact me!
 
+[@](https://) - feel free to contact us!
 
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
+## License
 
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+Schedule N is intended solely for education purposes. The project is not intended for any commercial, monetary, or data sharing use.
+
 
