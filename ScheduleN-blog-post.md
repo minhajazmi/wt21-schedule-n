@@ -262,5 +262,16 @@ There are plans for usage of more semantic tags and web accessibility. In additi
 
 
 #### Backend
-Nodejs, express, and Mongodb were used to build the backend. The backend also worked on setting up a flask server so that we could connect to the Data Science's phyton script. After the user submits the query, the backend sends a request to the python script, which provides the Time-management type to the backend based on the options selected. The backend then sends the answer to the front end to present to the users.
-The backend also used Docker to improve team collaboration by minimizing dependencies setup time.
+[Nodejs](https://nodejs.org/en), [Express](https://expressjs.com), and [Mongodb](https://www.mongodb.com) were used to build the backend.
+Firstly, [Nodejs](https://nodejs.org/en)-app was created to get the quiz results and user signup/login data, for this purposeor the connection to Frontend, [Express](https://expressjs.com) was used and app set to listen on port:4000.
+
+Secondly, The [Mongodb](https://www.mongodb.com) database was integerated to store the user data.
+
+After that the most important thing was to process the quiz data and send back user, their results. For this purpose backend also worked on setting up a [flask](https://flask.palletsprojects.com/en/2.0.x) server running on Port:5000 so that we could connect to the Data Science's phyton script for processing the output results. 
+
+In simple words, whenever the user submits the query, the backend sends a request to the python script, which provides the Time-management type to the backend, based on the options selected. The backend then sends the final result to the frontend and user get to know their Time-Management type.
+
+As we know that, creating a MERN-app includes a lot of different dependencies and whoever wants to run this app have alot of pre-installing issues. To get rid of this problem Dokerization was the best option. 
+[Docker-Hub](https://hub.docker.com) was used to create an image for every branch i.e frontend, backend, data-science and Mongo. Atlast, a Docker-compose automation file (yml) was created so that in future this app can easily be hosted live, globally. 
+
+Note: The current version runs locally due to time constraints we did'nt manage to make it live. But soon in near future this app will be live and can be used by anyone.
