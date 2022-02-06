@@ -207,18 +207,18 @@ The future development directions of DS include the following:
 
 ***Backend***:
 
-MongoDB - Database for users and datasets
-Flask - Processing and serving dataset
-Express JS - Serving JSON data, static files, and route to flask end point
-Axios
+- MongoDB - Database for users and datasets
+- Flask - Processing and serving dataset
+- Express JS - Serving JSON data, static files, and route to flask end point
+- Axios
 
 ***Frontend***:
 
-HTML
-CSS
-JavaScript
-React
-Axios
+- HTML
+- CSS
+- JavaScript
+- React
+- Axios
 
 ![techstack](./img/techstack.png)
 
