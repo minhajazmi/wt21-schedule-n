@@ -176,7 +176,7 @@ In this stage the quiz-type conversion function was adjusted to match the requir
 
 The current version of the script called by website can be found in [this Github repository](https://github.com/TechLabs-Berlin/wt21-schedule-n/blob/xinhao_branch/get_TM_type_5_option.py): 
 
-**Next stage:**
+**Next steps:**
 
 The future development directions of DS include the following:
 
