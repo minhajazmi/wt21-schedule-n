@@ -66,32 +66,40 @@ The questionnaire was designed based on the 4 to 6 descriptions of each time man
 Our initial dataset was collected via Google forms. [*Dataset 1*](https://github.com/TechLabs-Berlin/wt21-schedule-n/blob/xinhao_branch/TM_result.csv) and [*dataset 2*](https://github.com/TechLabs-Berlin/wt21-schedule-n/blob/xinhao_branch/TM_result_2nd.csv) was collected in two rounds and later used in data analysis.
 
 ### **UX Track**
+**Introduction**
 
-Saba > you will find all other details on Notion: - [Schedule-N / UX Track](https://www.notion.so/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f)
+In this project UX track worked based on a design thinking process. Working in line with a design thinking approach helped us to keep iteration in our work flows. As a first step we tried to reach mutual understanding about the problem that we wanted to solve and then started our work with research. The UX track activities include these main parts: discovery research, define, ideate and prototype. In the whole work we tried to be focused on user needs and asked ourselves why we need to add or not add a feature. So we tried to consider the data-driven approach too. You can find the details about the process in this links: 
+
+- [Schedule-N / UX Track](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f)
 
 On this Notion you will read:
 
-**Discovery Research**
-1. [Competitive Analytics](https://www.notion.so/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f)
-2. [User Research](https://www.notion.so/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f) 3. [Formative Research](https://www.notion.so/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f)
-4. Sample of what we have done during this steps.
+**Discovery Research**  
+1. [Competitive Analytics](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#0e4d89fa7b054794b39bafa4047e57dd)  
+2. [User Research](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#ebaa7fa9382249bb94f7e039e662fdbb) 
+3. [Formative Research](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#9dfcd19c056f4e2caca8e737c3af6027)  
+4. Sample of what we have done during this steps.  
 
-**Define** 1. [Affinity Diagram and User Persona](https://www.notion.so/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f) 2. [Problem Statement (POV)](https://www.notion.so/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f) 3. [User Stories](https://www.notion.so/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f) 4. Business Goal
+**Define**
+1. [Affinity Diagram and User Persona](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#7f4ea22cc0174d1ca1cb5f93b6429caa)
+2. [Problem Statement (POV)](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#5fe3b2df862c4755b66afe9660e8b9c6)
+3. [User Stories](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#de43d88a69184683b7551c55dc43ca92) 
+4. Business Goal
 
-**Ideate**
-1. [Solutions](https://www.notion.so/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f)
-2. [Features and Requirements](https://www.notion.so/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f)
-3. [Limitations](https://www.notion.so/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f)
-4. [Decision Path](https://www.notion.so/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f)
-5. [Content Strategies](https://www.notion.so/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f)
-6. [Task Flows (UX Flows)](https://www.notion.so/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f)
-7. [Site Map (Overview)](https://www.notion.so/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f)
+**Ideate**  
+1. [Solutions](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#c5a2df3305364eeeb7ed1ddcbf9551b1)  
+2. [Features and Requirements](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#4d2cf7a4fe5b4c619d9448bac9ce1b40)  
+3. [Limitations](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#e78c7e210c344336813c4da8503ac0d5)  
+4. [Decision Path](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#27164a531d8b41bd8ff14709aae53afb)  
+5. [Content Strategies](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#495a445ffe874c8f98d65498e57f4410)  
+6. [Task Flows (UX Flows)](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#225f0e2914bf40afbc0301b5ee4a5962)  
+7. [Site Map (Overview)](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#acdeb4f2f91c416b931b64ae4aaaefc5)  
 
-**Prototype** 1. [Wireframing](https://www.notion.so/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f)
-2. [Usability Testing](https://www.notion.so/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f)
-3. [UI Style Guide](https://www.notion.so/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f)
-4. [Prototyping](https://www.notion.so/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f)
-
+**Prototype**
+1. [Wireframing](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#709665d71b234cbc8b33e88130006589)  
+2. [Usability Testing](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#2d094b94ac4d49f2a24fbf4ee365150d)  
+3. [UI Style Guide](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#2d094b94ac4d49f2a24fbf4ee365150d)  
+4. [Prototyping](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#2d094b94ac4d49f2a24fbf4ee365150d)  
 ### **DS Track**
 
 You can find the details of the code in [Schedule-N / DS Track](https://www.notion.so/Schedule-N-DS-Track-ceae7706f14e439a9c1b76968e6fb256)
