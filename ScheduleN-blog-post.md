@@ -205,14 +205,14 @@ The future development directions of DS include the following:
 
 **Tech Stack**
 
-Backend:
+***Backend***:
 
 MongoDB - Database for users and datasets
 Flask - Processing and serving dataset
 Express JS - Serving JSON data, static files, and route to flask end point
 Axios
 
-Frontend:
+***Frontend***:
 
 HTML
 CSS
@@ -222,9 +222,9 @@ Axios
 
 ![techstack](./img/techstack.png)
 
-## Frontend
+#### Frontend
 
-The wire frame was created with [React](https://create-react-app.dev/) for a web application. The main functionality is the user quiz to define the time management style. Since there is to handle 27 questions in the form and also in the beginning of the project there was the idea to implement even more with more general personality quiz, the [react hook form](https://react-hook-form.com/) library was importet to make the handling easier and adjustments quicker. This hook is also be used for the user accounts, but it couldn't be finished in time till deadline (covid cases in the backend and frontend part). The backend part of the user accounts was almost finshed, except for the implementation of the password. Instead there was the attempt to use the birthday instead. For future development the API has to be inplemented in the frontend and with this several toggle effects for logged in users, which can be seen in the figma files. 
+The wire frame was created with [React](https://create-react-app.dev/) for a web application. The main functionality is the user quiz to define the time management style. Since there is to handle 27 questions in the form and also in the beginning of the project there was the idea to implement even more with more general personality quiz, the [React Hook Form](https://react-hook-form.com/) hook was importet to make the handling easier and adjustments quicker. This hook is also be used for the user accounts, but it couldn't be finished in time till deadline (covid cases in the backend and frontend part). The backend part of the user accounts was almost finshed, except for the implementation of the password. Instead there was the attempt to use the birthday instead. For future development the API has to be inplemented in the frontend and with this several toggle effects for logged in users, which can be seen in the figma files. 
 
 For the result commponent the [React Minimal Pie Chart](https://www.npmjs.com/package/react-minimal-pie-chart) was used to display the statistics of the user type. Some styling issues couldn't be solved within time, since a line break of the label wouldn't take some more time to adjust and other label styling for the shift have to be discussed with the UX team (small percantages of types make the visability of labeling more difficult). This library allows build in usage off several effects, wich will be helpful for displaying the information on other types for the user.
 
@@ -237,4 +237,4 @@ There are plans for usage of more semantic tags and web accessibility. In additi
 ![ScreenshotQuiz](./img/quizscreenshot.png)
 
 
-## Backend
+#### Backend
