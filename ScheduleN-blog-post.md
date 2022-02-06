@@ -102,23 +102,23 @@ On this Notion you will read:
 4. [Prototyping](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#2d094b94ac4d49f2a24fbf4ee365150d) 
 5. [Reasoning and explinations](https://www.notion.so/Reasoning-and-explanations-de1f204b3d1140218a80a1316a56a733)
 
-** UX Successes, Challanges, and Learnings**
+**UX Successes, Challanges, and Learnings**
 
-3.**Success**
+1. **Success**
 
 - Working together as a UX team despite working completely opposite work schedules!
 - Learning to work together with different levels with tech abilities
 - Sharing ideas and numerous iteration via Miro, communications via Slack and Figma.
 - Our final designs were tested with users and received positive feedback, minor or no changes were required!
 
-2.**Challenges**
+2. **Challenges**
 
 - Jumping in at the deep end after the academic phase! Having to apply the theory to reality was an adjustment for us all.
 - Understanding the capabilities of the other tracks and the responsibilities of the individual teams
 - Timeline of doing research vs needing to create wireframes for the WD team- difficult to get the in depth user research completed that we would have liked to
 - Clare contracting Corona virus meant that the initial wireframes decisions were left for Saba to navigate on her own- she had to keep the project moving by herself during a really busy time, thanks to her efforts the WD got what they needed!
 
-3.**Learnings**
+3. **Learnings**
 
 - Getting as much user feedback early as possible will save you time! And it doesn’t have to be perfect before you show them designs
 - We now have a good understanding of the other tracks roles within the project and what they do/don’t require from us
