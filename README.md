@@ -112,7 +112,6 @@ Now you have two options, run every port serperately or use everything combined 
    npm start
    ```
 
-
 ## Usage
 
 ![techstack](./img/techstack.png)
@@ -142,7 +141,7 @@ To do:
 - WD  | [Suliyat Opeyemi](https://github.com/sullyheart)
 - WD  | [Minhaj Azmi](https://github.com/minhajazmi)
 - WD  | [Angelina Blumenthal](https://github.com/linablum)
-- UX  | Clare Dunn
+- UX  | [Clare Dunn](https://github.com/CDunn90)
 - UX  | [Saba Rezzadeh Harati](https://github.com/sabarzh)
 
 - Mentors: WD  | [Matheus Cardoso](https://github.com/cardoso), DS  | Tiago Ignacio
