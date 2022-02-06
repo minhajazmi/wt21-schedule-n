@@ -100,7 +100,7 @@ On this Notion you will read:
 2. [Usability Testing](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#2d094b94ac4d49f2a24fbf4ee365150d)  
 3. [UI Style Guide](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#2d094b94ac4d49f2a24fbf4ee365150d)  
 4. [Prototyping](https://puzzled-musician-415.notion.site/Schedule-N-UX-Track-029902cd6fd840d78712faf738d72d9f#2d094b94ac4d49f2a24fbf4ee365150d) 
-5. [Reasoning and explinations](https://www.notion.so/Reasoning-and-explanations-de1f204b3d1140218a80a1316a56a733)
+5. [Reasoning and explanations](https://www.notion.so/Reasoning-and-explanations-de1f204b3d1140218a80a1316a56a733)
 
 **UX Successes, Challanges, and Learnings**
 
