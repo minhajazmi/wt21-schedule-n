@@ -133,7 +133,12 @@ You can find the details of the code in [Schedule-N / DS Track](https://www.noti
 In this stage two algorithms were written to:
 
 1. Convert individual user’s quiz answers into time management (TM) types
-2. Investigate the distribution of TM types in the user group
+3. Investigate the distribution of TM types in the user group
+
+In this process, pandas and numpy library pf python was used to clean and sort data, and matplotlib was used to plot the graph. 
+The scripts written and the graph created can be found in this branch: 
+[conversion function & TM type distribution analysis](https://github.com/TechLabs-Berlin/wt21-schedule-n/tree/xinhao_branch)
+[Final graph](https://github.com/TechLabs-Berlin/wt21-schedule-n/blob/xinhao_branch/Time_management_percent.png)
 
 **2nd stage: Connect to backend**
 
