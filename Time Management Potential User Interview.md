@@ -1,9 +1,11 @@
-Time Management Potential User Interview 
-Thank you for helping us with our research in to how people manage their time! In this interview we will ask some questions about yourself, and your thoughts around managing your time- there are no right or wrong answers. 
-Introduction 
-To begin, can you please tell me what a typical day looks like for you? (potential probes: working or studying? full/part time?) 
+**Time Management Potential User Interview** 
+*Thank you for helping us with our research in to how people manage their time! In this interview we will ask some questions about yourself, and your thoughts around managing your time- there are no right or wrong answers.* 
+**Introduction** 
+
+**To begin, can you please tell me what a typical day looks like for you? (potential probes: working or studying? full/part time?)** 
 I get up and work out in the morning, get ready for work (shower, brush teeth etc) then get to work. Maybe do some work in the evening, have food at some point. Sometimes meet up with friends/girlfriend in the evening. 
-If working: can you tell me a bit about the industry that you work in and your job role?I work full time from home, in the tech industry as a software engineer 
+**If working: can you tell me a bit about the industry that you work in and your job role?**
+I work full time from home, in the tech industry as a software engineer 
 What kind of tasks do you perform the most? (if needed can prompt: working, studying, childcare, shopping, etc) 
 I work out a lot, interesting work tasks (ones that I enjoy and want to complete) and non group tasks (Individual work related tasks that I can do on my own) 
 Is a weekday different to the weekend? If yes, how so? 
