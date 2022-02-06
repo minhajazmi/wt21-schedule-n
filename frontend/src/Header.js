@@ -6,7 +6,7 @@ import Team from './Team'
 import SignUp from './Signup';
 import Login from './Login';
 import './Header.css';
-import logo from './images/logo.svg';
+import logo from './images/Logo.svg';
 
 function Header() {
   const [firstModal, setFirstModal] = useState(false);
