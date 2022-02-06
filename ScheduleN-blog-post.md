@@ -33,7 +33,7 @@ Our mission is to help people improve their knowledge about themselves regarding
 
 ## Time based development progress
 
-![Schedule-N_progress.png](Schedule%20N%20-%20blog%20post%20119ae233f519437c930095ca19771286/Schedule-N_progress.png)
+![Schedule-N_progress.png](https://github.com/TechLabs-Berlin/wt21-schedule-n/blob/blogpost/Schedule-N_progress.png)
 
 ## Track based development progress
 
