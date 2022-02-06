@@ -68,14 +68,13 @@ Now you have two options, run every port serperately or use everything combined 
 
 #### Mongo DB and Mongoose
 
-1. Install [MongoDB](https://docs.mongodb.com/guides/server/install/) <!-- Add Mongosh -->
+1. Install [MongoDB](https://docs.mongodb.com/guides/server/install/) 
 
 2. Install [MongoDB Shell(mongosh)](https://docs.mongodb.com/mongodb-shell/install/#std-label-mdb-shell-install)
 
-3. Run the database
-   ```bash
-   
-   ```
+3. Run the database depending on your operating system 
+
+
 #### Flask server
 4. Activate the environment and install dependencies inside the `DS-server` directory
    ```bash
@@ -142,19 +141,16 @@ To do:
 - DS  | E. Delali Aggor
 - WD  | [Suliyat Opeyemi](https://github.com/sullyheart)
 - WD  | [Minhaj Azmi](https://github.com/minhajazmi)
-- WD  | [Angelina Blumenthal](https://github.com/racketcat)
+- WD  | [Angelina Blumenthal](https://github.com/linablum)
 - UX  | Clare Dunn
 - UX  | [Saba Rezzadeh Harati](https://github.com/sabarzh)
 
 - Mentors: WD  | [Matheus Cardoso](https://github.com/cardoso), DS  | Tiago Ignacio
 
 ## Acknowledgements
-- This quiz was based on [](https://).
+- This quiz was based on [TSSI](https://https://sanespaces.com/prm/tssifree/).
 - Many thanks to the TechLabs Berlin Team
 
-<!-- ## Contact
-
-[@] - feel free to contact us! -->
 
 ## License
 
