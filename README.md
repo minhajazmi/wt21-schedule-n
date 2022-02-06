@@ -60,6 +60,6 @@ https://www.figma.com/proto/y52E1Exvi9uwlEfUhTzJsd/Project?node-id=610%3A6574&sc
 
 *Instructions- user flows available:*
 
-1. Onboarding page > Sign up (click in the boxes) >  take quiz > get results and explore interactive pie chart > log out
+1. Onboarding page > Sign up (click in inout fields, text not enabled) >  take quiz > get results and explore interactive pie chart > log out
 2. Onboarding page > take quiz >  get results > sign up > explore interactve pie chart > log out
-3. Onboarding page > log in > See result, explore interactice pie chart > log out
+3. Onboarding page > log in (click in input fields, text not enabled)> See result, explore interactice pie chart > log out
