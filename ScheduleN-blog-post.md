@@ -262,3 +262,5 @@ There are plans for usage of more semantic tags and web accessibility. In additi
 
 
 #### Backend
+Nodejs, express, and Mongodb were used to build the backend. The backend also worked on setting up a flask server so that we could connect to the Data Science's phyton script. After the user submits the query, the backend sends a request to the python script, which provides the Time-management type to the backend based on the options selected. The backend then sends the answer to the front end to present to the users.
+The backend also used Docker to improve team collaboration by minimizing dependencies setup time.
