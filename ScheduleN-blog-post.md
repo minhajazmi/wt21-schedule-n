@@ -126,8 +126,6 @@ On this Notion you will read:
 
 ### **DS Track**
 
-You can find the details of the code in [Schedule-N / DS Track](https://www.notion.so/Schedule-N-DS-Track-ceae7706f14e439a9c1b76968e6fb256)
-
 **1st stage: Data analysis**
 
 In this stage two algorithms were written to:
