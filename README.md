@@ -1,6 +1,6 @@
 # Schedule N
-> Manage you time based on your personality and preferences
-> Live demo [_here_](https://). <!-- Do we have the online version on digital ocean yet?   -->
+> Manage you time based on your personality and preferences. Take a quiz and personalize your time management.
+
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -19,16 +19,16 @@
 
 ## General Information
 
-You can find various advice online on how to optimize your time managment, but often people are unable to use that advice effectivly because it is too general for individual circumstances and behaviour. This project aims to give out more personalised advice to users, keep them accountable and update them with new information about their time managment style.
+You can find various advice online on how to optimize your time management, but often people are unable to use that advice effectively because it is too general for individual circumstances and behaviour. This project aims to give out more personalised advice to users, keep them accountable and update them with new information about their time management style.
 
-For our first attemp to solve this problem, users can take the quiz and find out about their time mangagement style. Being aware of the type is the first step to takle the issue of having better time management.
+For our first attempt to solve this problem, users can take the quiz and find out about their time management style. Being aware of the type is the first step to tackle the issue of having better time management.
 
 Schedule N is an educative project implemented by students of TechLabs Berlin in winter term 21/22. 
 
 
 ## Technologies Used
 
-- React & Hooks (Minimal Pie Chart, React Hook Form)
+- React & Hooks (React Minimal Pie Chart, React Hook Form)
 - React Router
 - Axios
 - Mongo DB and Mongoose
@@ -53,7 +53,7 @@ How to get a copy and locally run it:
    git clone https://github.com/TechLabs-Berlin/wt21-schedule-n.git
    ```
 
-Now you have two options, run every port serperately on its own or use everything combined in docker.
+Now you have two options, run every port serperately or use everything combined in docker.
 
 ### Via docker (easiest):
 
@@ -64,45 +64,45 @@ Now you have two options, run every port serperately on its own or use everythin
     docker-compose up
     ```
 
-### Single ports (Windows)
+### Single ports
 
- #### Node app  
-2. Install dependencies inside the `backend` directory
-   ```bash
-   npm install
-   ```
-3. Run the app
-    ```bash
-   npm start
-   ```
 #### Mongo DB and Mongoose
 
-3. Install [MongoDB](https://docs.mongodb.com/guides/server/install/) <!-- Add Mongosh -->
+1. Install [MongoDB](https://docs.mongodb.com/guides/server/install/) <!-- Add Mongosh -->
 
-4. Install dependencies inside the `backend` directory
-   ```bash
-   install mongoose
-   ```
-5. Run the database
+2. Install [MongoDB Shell(mongosh)](https://docs.mongodb.com/mongodb-shell/install/#std-label-mdb-shell-install)
+
+3. Run the database
    ```bash
    
    ```
 #### Flask server
-6. Activate the environment and install dependencies inside the `DS-server` directory
+4. Activate the environment and install dependencies inside the `DS-server` directory
    ```bash
    > venv\Scripts\activate
    ```
    ```bash
    pip install flask
    ```
-7. Install pandas
+5. Install pandas
    ```bash
    pip install pandas
    ```
-8. Run the server
+6. Run the server
    ```bash
    flask run
    ```
+
+ #### Node app  
+7. Install dependencies inside the `backend` directory
+   ```bash
+   npm install
+   ```
+8. Run the app
+    ```bash
+   npm start
+   ```
+
  #### React app
 9. Install dependencies inside the `frontend` directory
    ```bash
@@ -112,6 +112,7 @@ Now you have two options, run every port serperately on its own or use everythin
    ```bash
    npm start
    ```
+
 
 ## Usage
 
