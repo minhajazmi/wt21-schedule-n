@@ -149,7 +149,7 @@ In this stage the quiz-type conversion function was adjusted to match the requir
     return user_TM_type
 ```
 
-1. The input of the function was changed from a .json file to a Json object, as user data is sent to backend in the format of Json object instead of .json file
+2. The input of the function was changed from a .json file to a Json object, as user data is sent to backend in the format of Json object instead of .json file
 
 ```python
 #%% load data
@@ -157,7 +157,7 @@ In this stage the quiz-type conversion function was adjusted to match the requir
     df = pd.DataFrame([user_answers])
 ```
 
-1. Based on the requirement of the backend, the keys of the json object should not contain hyphen ‘-’, thus, the data cleaning function in DS script was changed accordingly
+3. Based on the requirement of the backend, the keys of the json object should not contain hyphen ‘-’, thus, the data cleaning function in DS script was changed accordingly
 
 ```python
 #%% define data cleaning function
@@ -174,7 +174,7 @@ In this stage the quiz-type conversion function was adjusted to match the requir
     type_num_data = type_data.applymap(text_to_score)
 ```
 
-1. Based on the feedback from user test, UX track suggested changing response key of quiz from  4-option to 5-option, adding the option of ‘neutral’ when user doesn’t have any preference. Following the changes of the quiz format, quiz-type conversion function was changed accordingly:
+4. Based on the feedback from user test, UX track suggested changing response key of quiz from  4-option to 5-option, adding the option of ‘neutral’ when user doesn’t have any preference. Following the changes of the quiz format, quiz-type conversion function was changed accordingly:
 - The score of each question was changed from 1-4 to 1-5
 
 ```python
