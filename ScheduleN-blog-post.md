@@ -184,8 +184,8 @@ In this stage the quiz-type conversion function was adjusted to match the requir
              return 1
          elif a == "IDisagree":
              return 2
-				 elif a == "neutral":
-						 return 3
+	 elif a == "neutral":
+	     return 3
          elif a == "IAgree":
              return 4
          elif a == "completelyAgree":
