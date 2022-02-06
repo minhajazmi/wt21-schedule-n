@@ -203,6 +203,38 @@ The future development directions of DS include the following:
 
 ### **WD Track**
 
-**Frontend**
+**Tech Stack**
 
-**Backend**
+Backend:
+
+MongoDB - Database for users and datasets
+Flask - Processing and serving dataset
+Express JS - Serving JSON data, static files, and route to flask end point
+Axios
+
+Frontend:
+
+HTML
+CSS
+JavaScript
+React
+Axios
+
+![techstack](./img/techstack.png)
+
+## Frontend
+
+The wire frame was created with [React](https://create-react-app.dev/) for a web application. The main functionality is the user quiz to define the time management style. Since there is to handle 27 questions in the form and also in the beginning of the project there was the idea to implement even more with more general personality quiz, the [react hook form](https://react-hook-form.com/) library was importet to make the handling easier and adjustments quicker. This hook is also be used for the user accounts, but it couldn't be finished in time till deadline (covid cases in the backend and frontend part). The backend part of the user accounts was almost finshed, except for the implementation of the password. Instead there was the attempt to use the birthday instead. For future development the API has to be inplemented in the frontend and with this several toggle effects for logged in users, which can be seen in the figma files. 
+
+For the result commponent the [React Minimal Pie Chart](https://www.npmjs.com/package/react-minimal-pie-chart) was used to display the statistics of the user type. Some styling issues couldn't be solved within time, since a line break of the label wouldn't take some more time to adjust and other label styling for the shift have to be discussed with the UX team (small percantages of types make the visability of labeling more difficult). This library allows build in usage off several effects, wich will be helpful for displaying the information on other types for the user.
+
+The installation of [React Router](https://reactrouter.com) to the frame was made to handle navigation. The first user feedback was partly worked in in the prototype. The footer was removed and header was consistent to all components. The use of React Router is now less used with the amount commponents since we have modals, but might be more needed for future development. 
+
+The application runs best with google chrome as browser, there is might occour styling issues for the login/signup page in other browser. It has to be figured out if a external library to normalise the behaviour of the browser is better or individual appearence adjustments in the CSS files.
+
+There are plans for usage of more semantic tags and web accessibility. In addition the code for the radio button questions can be shorten by mapping over an array of the questions, but due to lack of time this will be done in future versions.
+
+![ScreenshotQuiz](./img/quizscreenshot.png)
+
+
+## Backend
