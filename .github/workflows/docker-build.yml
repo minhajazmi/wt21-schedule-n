@@ -26,12 +26,12 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Run a frontend script
-        run: |
-          docker build ./reactjs frontend
       - name: Run a backend script
         run: |
           docker build ./nodejs backend
       - name: Run a python script
         run: |
           docker build ./python ds-server
+      - name: Run a frontend script
+        run: |
+          docker build ./reactjs frontend
